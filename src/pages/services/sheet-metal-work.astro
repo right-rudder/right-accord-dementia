@@ -1,0 +1,95 @@
+---
+import Content from "../../components/Content.astro";
+import Hero2 from "../../components/Hero2.astro";
+import ServicesCard from "../../components/ServicesCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const servicesData = {
+  hero: {
+    imagePath: "/src/assets/will-q3iOoNN9OVQ-unsplash.jpg",
+    imageAlt: "adsf",
+    heading: "Sheet Metal Work",
+    description:
+      "At Penn Air Repair, we specialize in high-quality sheet metal work for aircraft. Whether you need repairs to existing components or custom fabrication of new parts, our skilled technicians have the expertise and experience to deliver exceptional results.",
+  },
+  content: {
+    upperheading: "Aviation Services",
+    heading: "Precision Repair and Fabrication",
+    description:
+      "Our sheet metal work services include repair and fabrication of a wide range of aircraft components, including panels, cowlings, and structural elements. We use high-quality materials and precision techniques to ensure the highest standards of quality and safety. Our skilled technicians have the expertise to handle a variety of sheet metal work projects, from minor repairs to custom fabrication of new parts.",
+    list: [
+      {
+        title: "Our Sheet Metal Work Services Include:",
+        listItems: [
+          {
+            title: "Repair and Replacement",
+            text: "We can repair or replace damaged sheet metal components such as: panels, cowlings, fairings, and structural elements. Our technicians have the skills and experience to restore your aircraft to its original condition.",
+          },
+          {
+            title: "Custom Fabrication",
+            text: "We can fabricate custom sheet metal components to your exact specifications, including: fairings, brackets and mounts or any other custom modifications you require. Our skilled technicians will work with you to design and create the parts you need.",
+          },
+        ],
+      },
+      {
+        title: "Our Commitment to Quality:",
+        listItems: [
+          {
+            title: "Precision and Accuracy",
+            text: "We utilize state-of-the-art equipment and techniques to ensure precise measurements and accurate fabrication.",
+          },
+          {
+            title: "High-Quality Materials",
+            text: "We use only the highest quality aircraft-grade materials that meet or exceed industry standards. Materials are sourced from reputable suppliers to ensure the safety and reliability of your aircraft.",
+          },
+          {
+            title: "FAA Compliance",
+            text: "All our sheet metal work is performed in accordance with FAA regulations and best practices. Our technicians are trained and certified to ensure compliance with all applicable standards.",
+          },
+          {
+            title: "Customer Satisfaction",
+            text: "We are dedicated to providing exceptional service and ensuring your complete satisfaction with our work. Your safety and the safety of your aircraft are our top priorities.",
+          },
+        ],
+      },
+      {
+        title: "Why Choose Penn Air Repair for Your Sheet Metal Needs?",
+        listItems: [
+          {
+            title: "Skilled Craftsmanship",
+            text: "Our technicians possess extensive experience in aircraft sheet metal work and are skilled in all aspects of repair and fabrication.",
+          },
+          {
+            title: "Attention to Detail",
+            text: "We pay meticulous attention to detail in every aspect of our work, ensuring that all repairs and fabrications are of the highest quality.",
+          },
+          {
+            title: "Competitive Pricing",
+            text: "We offer competitive pricing for all our sheet metal work services. We believe in providing value for our customers.",
+          },
+          {
+            title: "Fast Turnaround Times",
+            text: "We strive to complete all projects efficiently and on time, minimizing downtime for your aircraft. We understand the importance of getting you back in the air as quickly as possible.",
+          },
+        ],
+      },
+    ],
+    cta: {
+      heading: "Ready to Schedule Your Sheet Metal Repairs or Custom Parts?",
+      description:
+        "Contact us today to discuss your sheet metal work needs. Our team will be happy to provide a free quote and answer any questions you may have.",
+      buttonText: "Get in Touch",
+      buttonLink: "/#contact-us",
+    },
+  },
+};
+---
+
+<BaseLayout
+  siteTitle="Sheet Metal Work | Our Services | Penn Air Repair"
+  siteDescription="Penn Air Repair is your one-stop shop for top-tier aircraft maintenance and repair services. Our expert team is dedicated to keeping your aircraft flying safely and efficiently."
+  siteKeywords="aircraft maintenance, aircraft repair, aircraft inspection, aircraft engine overhaul"
+>
+  <Hero2 data={servicesData.hero} />
+  <Content data={servicesData.content} />
+</BaseLayout>

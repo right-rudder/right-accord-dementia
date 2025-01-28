@@ -1,0 +1,77 @@
+---
+import Hero2 from "../../components/Hero2.astro";
+import ServicesCard from "../../components/ServicesCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const servicesData = {
+  hero: {
+    imagePath: "/src/assets/eduardo-buscariolli-znKUv5-vadk-unsplash.jpg",
+    imageAlt: "adsf",
+    heading: "Our Services",
+    description:
+      "Your aircraft is in good hands with Penn Air Repair. Our expert team is dedicated to keeping your aircraft flying safely and efficiently. From inspections to engine overhauls, we offer a wide range of top-tier maintenance and repair services.",
+  },
+  services: [
+    {
+      title: "100 Hour Inspections",
+      imagePath: "/src/assets/DG inspecting wing repair.jpg",
+      imageAlt:
+        "Aircraft engine being inspected by a Penn Air Repair technician",
+      description:
+        "Meticulous examination of your aircraft's airframe, engine, and systems every 100 flight hours to ensure continued airworthiness and safety.",
+      link: "/services/100-hour-inspection",
+    },
+    {
+      title: "Annual Inspections",
+      imagePath: "/src/assets/Geo-Kyle repairing wing.jpg",
+      imageAlt:
+        "Aircraft engine being inspected by a Penn Air Repair technician",
+      description:
+        "Comprehensive assessment of your aircraft's overall condition, including airframe, engine, systems, and avionics, to meet FAA regulations and maintain peak performance.",
+      link: "/services/annual-inspection",
+    },
+    /* {
+      title: "Sheet Metal Work",
+      imagePath: "/src/assets/will-q3iOoNN9OVQ-unsplash.jpg",
+      imageAlt:
+        "Aircraft engine being inspected by a Penn Air Repair technician",
+      description:
+        "Expert repair and fabrication of aircraft sheet metal components, including panels, cowlings, and structural elements, using high-quality materials and precision techniques.",
+      link: "/services/sheet-metal-work",
+    },
+    {
+      title: "Light Avionics",
+      imagePath: "/src/assets/mike-petrucci-dI284PFy_pU-unsplash.jpg",
+      imageAlt:
+        "Aircraft engine being inspected by a Penn Air Repair technician",
+      description:
+        "Installation, repair, and maintenance of basic avionics systems such as radios, transponders, and GPS units to enhance communication, navigation, and situational awareness.",
+      link: "/services/light-avionics",
+    }, */
+  ],
+};
+---
+
+<BaseLayout
+  siteTitle="Our Services | Penn Air Repair"
+  siteDescription="Penn Air Repair is your one-stop shop for top-tier aircraft maintenance and repair services. Our expert team is dedicated to keeping your aircraft flying safely and efficiently."
+  siteKeywords="aircraft maintenance, aircraft repair, aircraft inspection, aircraft engine overhaul"
+>
+  <Hero2 data={servicesData.hero} />
+
+  <section class="mx-auto max-w-6xl py-16 lg:py-24">
+    <ul role="list" class="flex flex-wrap gap-4 justify-center">
+      {
+        servicesData.services.map((program) => (
+          <ServicesCard
+            title={program.title}
+            imagePath={program.imagePath}
+            imageAlt={program.imageAlt}
+            link={program.link}
+            description={program.description}
+          />
+        ))
+      }
+    </ul>
+  </section>
+</BaseLayout>

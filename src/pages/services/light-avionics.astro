@@ -1,0 +1,78 @@
+---
+import Content from "../../components/Content.astro";
+import Hero2 from "../../components/Hero2.astro";
+import ServicesCard from "../../components/ServicesCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const servicesData = {
+  hero: {
+    imagePath: "/src/assets/mike-petrucci-dI284PFy_pU-unsplash.jpg",
+    imageAlt: "adsf",
+    heading: "Light Avionics",
+    description:
+      "At Penn Air Repair, we offer a comprehensive range of light avionics services to enhance the safety and efficiency of your flights. Our experienced technicians can install, repair, and maintain a variety of avionics systems, from basic communication radios to advanced GPS navigation systems.",
+  },
+  content: {
+    upperheading: "Aviation Services",
+    heading: "Enhancing Communication, Navigation, and Safety",
+    description:
+      "Our light avionics services are designed to help you get the most out of your aircraft. Whether you need to upgrade your communication systems, enhance your navigation capabilities, or improve your situational awareness, our expert technicians can help. We offer a full range of avionics services to meet your needs and keep you flying safely.",
+    list: [
+      {
+        title: "Our Light Avionics Services Include:",
+        listItems: [
+          {
+            title: "Installation",
+            text: "Communication Radios: VHF and UHF radios for clear and reliable communication with air traffic control and other aircraft. Transponders: Mode S transponders for accurate identification and tracking by air traffic control. GPS Navigators: High-precision GPS navigation systems for accurate positioning and flight planning. Audio Panels: Integrated audio panels for easy control of communication and navigation systems.",
+          },
+          {
+            title: "Repair and Maintenance",
+            text: "Diagnosis and repair of faulty avionics components. Preventive maintenance to ensure optimal performance and reliability. Upgrades to existing avionics systems to improve functionality and safety.",
+          },
+          {
+            title: "System Integration",
+            text: "Integration of new avionics systems with existing aircraft systems. Configuration and programming of avionics systems to meet your specific needs.",
+          },
+        ],
+      },
+      {
+        title: "Why Choose Penn Air Repair for Your Avionics Needs?",
+        listItems: [
+          {
+            title: "Experienced Technicians",
+            text: "Our team of FAA-certified technicians has extensive experience in installing, repairing, and maintaining a wide range of avionics systems. We stay up-to-date on the latest technologies and best practices to ensure the highest quality of service.",
+          },
+          {
+            title: "State-of-the-Art Equipment",
+            text: "We utilize the latest diagnostic and testing equipment to ensure accurate and efficient service. Our technicians have access to the tools and resources they need to get the job done right the first time.",
+          },
+          {
+            title: "Customer Satisfaction",
+            text: "We are committed to providing exceptional service and ensuring your complete satisfaction with our work. Your safety and the safety of your aircraft are our top priorities.",
+          },
+          {
+            title: "Competitive Pricing",
+            text: "We strive to complete all projects efficiently and on time, minimizing downtime for your aircraft. We understand the importance of getting you back in the air as quickly as possible.",
+          },
+        ],
+      },
+    ],
+    cta: {
+      heading: "Ready to Schedule Your Sheet Metal Repairs or Custom Parts?",
+      description:
+        "Contact us today to discuss your avionics needs. Our team will be happy to provide a free consultation and answer any questions you may have.",
+      buttonText: "Get in Touch",
+      buttonLink: "/#contact-us",
+    },
+  },
+};
+---
+
+<BaseLayout
+  siteTitle="Light Avionics | Our Services | Penn Air Repair"
+  siteDescription="Penn Air Repair is your one-stop shop for top-tier aircraft maintenance and repair services. Our expert team is dedicated to keeping your aircraft flying safely and efficiently."
+  siteKeywords="aircraft maintenance, aircraft repair, aircraft inspection, aircraft engine overhaul"
+>
+  <Hero2 data={servicesData.hero} />
+  <Content data={servicesData.content} />
+</BaseLayout>

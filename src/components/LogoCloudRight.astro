@@ -1,0 +1,42 @@
+---
+import ImageComp from "./ImageComp.astro";
+
+const { data } = Astro.props;
+---
+
+<section class="bg-white py-32 lg:pt-24 lg:pb-32" id={data.id}>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
+      <div class="mx-auto w-full max-w-xl lg:mx-0">
+        <h2
+          class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+        >
+          {data.heading}
+        </h2>
+        <p class="mt-6 text-lg/8 font-parag text-gray-600">
+          {data.description}
+        </p>
+        <div class="mt-8 flex items-center gap-x-6">
+          <a
+            href="#contact-us"
+            class="rounded-md bg-red-800 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+            >Contact us <span aria-hidden="true">&rarr;</span></a
+          >
+        </div>
+      </div>
+      <div
+        class="mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-8 lg:gap-x-16 lg:gap-y-16"
+      >
+        {
+          data.logos.map((logo) => (
+            <ImageComp
+              imagePath={logo.imagePath}
+              imageAlt={logo.imageAlt}
+              styles="max-w-36 max-h-24 object-contain object-center"
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

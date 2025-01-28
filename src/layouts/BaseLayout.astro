@@ -1,0 +1,37 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION, KEYWORDS, OG_IMAGE } from "../consts";
+import "@fontsource-variable/public-sans";
+// import "@fontsource-variable/cabin";
+// Supports weights 200-800
+import "@fontsource-variable/bricolage-grotesque";
+import "@fontsource-variable/montserrat";
+import Navbar from "../components/Navbar";
+import ChatWidget from "../components/ChatWidget.astro";
+import Banner from "../components/Banner.astro";
+
+const { pathname } = Astro.url;
+const { siteTitle, siteDescription, keywords } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <BaseHead
+      title={siteTitle || SITE_TITLE}
+      description={siteDescription || SITE_DESCRIPTION}
+      keywords={keywords || KEYWORDS}
+      image={OG_IMAGE}
+    />
+  </head>
+  <body class="font-sans">
+    <Banner />
+    <Navbar pathname={pathname} client:load />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <!-- <ChatWidget /> -->
+  </body>
+</html>

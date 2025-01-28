@@ -1,0 +1,70 @@
+---
+import { footerLinks } from "../data/footerLinks";
+import ImageComp from "./ImageComp.astro";
+import { Image } from "astro:assets";
+import { SITE_DESCRIPTION } from "../consts";
+import logo from "../assets/penn-air-logo-250.webp";
+
+const links = footerLinks;
+---
+
+<footer class="bg-gradient-to-b from-white to-red-50" id="footer">
+  <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+    <nav
+      class="-mb-6 flex flex-wrap justify-center text-center lg:gap-x-12 gap-y-3 text-base/6"
+      aria-label="Footer"
+    >
+      {
+        links.map((link) => (
+          <a
+            href={link.link}
+            class="text-gray-500 font-thin w-full md:w-auto hover:text-red-800 duration-150"
+          >
+            {link.name}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="mt-24 flex justify-center gap-x-10">
+      <Image
+        src={logo}
+        alt="Right Rudder Marketing Logo"
+        class="object-contain h-16 w-auto px-5 lg:px-0 drop-shadow-md"
+      />
+    </div>
+    <div class="mt-5 flex justify-center align-middle items-center w-full">
+      <a
+        href="/privacy-policy"
+        class="mr-4 transition-colors duration-300 text-sm text-gray-400 hover:text-red-700"
+        >Privacy Policy
+      </a>
+      <span class="text-blue-800 text-sm"> &#x2022; </span>
+      <a
+        href="/terms-of-service"
+        class="ml-4 transition-colors duration-300 text-sm text-gray-400 hover:text-red-700"
+        >Terms of Service
+      </a>
+    </div>
+    <div
+      class="mt-6 text-center font-light font-parag text-pretty text-sm/5 text-gray-400 max-w-2xl mx-auto"
+    >
+      <p>{SITE_DESCRIPTION}</p>
+    </div>
+    <p class="mt-6 text-center text-base font-semibold text-gray-400">
+      &copy; 2024 Penn Air Repair. All Rights Reserved.
+    </p>
+    <a
+      href="https://rightruddermarketing.com/"
+      target="_blank"
+      class="mt-12 group text-center flex gap-2 justify-center text-sm/6 text-gray-400 hover:text-blue-500 duration-500"
+    >
+      Powered by
+      <ImageComp
+        imagePath="/src/assets/RRM-R-symbol-474.webp"
+        imageAlt="Right Rudder Marketing Logo"
+        styles="h-6 w-auto group-hover:scale-105 group-hover:brightness-125 drop-shadow-sm duration-200"
+      />
+      More Right Rudder
+    </a>
+  </div>
+</footer>

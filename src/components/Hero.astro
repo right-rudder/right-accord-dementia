@@ -1,0 +1,57 @@
+---
+import ImageComp from "./ImageComp.astro";
+
+const { data } = Astro.props;
+---
+
+<section class="relative isolate overflow-hidden pt-14 min-h-screen">
+  <ImageComp
+    imagePath="/src/assets/penn-air-bg.webp"
+    imageAlt="adsf"
+    styles="absolute inset-0 -z-10 size-full object-cover object-right lg:object-center"
+  />
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto lg:mx-0 max-w-2xl py-28">
+      <div class="mb-8 flex justify-center lg:justify-start">
+        <div
+          class="relative rounded-full px-3 py-1 text-sm/6 text-black ring-1 font-bold bg-red-300/10 ring-red-900 hover:ring-red-500/90 hover:scale-105 duration-150"
+        >
+          Our Maintenance Process. <a
+            href="#how-we-do-it"
+            class="font-light ml-2 text-black/70"
+            ><span class="absolute inset-0" aria-hidden="true"></span>Read more <span
+              aria-hidden="true">&rarr;</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="text-center lg:text-left">
+        <h1
+          class="text-balance text-5xl lg:text-7xl lg:leading-[3.5rem] font-bold tracking-tight text-red-900"
+        >
+          {data.heading}
+        </h1>
+        <h2 class="text-balance mt-4 text-3xl lg:text-4xl lg:leading-8 font-bold tracking-tight text-yellow-600">
+          {data.subHeading}
+        </h2>
+        <p class="mt-8 text-pretty text-lg font-parag font-light text-gray-700">
+          {data.description}
+        </p>
+        <div
+          class="mt-10 flex items-center justify-center lg:justify-start gap-x-6"
+        >
+          <a
+            href="#contact-us"
+            class="rounded-md bg-red-800 duration-200 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="absolute inset-0 -z-10 bg-gradient-to-t from-white via-white/30 to-white/10"
+    aria-hidden="true"
+  >
+  </div>
+</section>
