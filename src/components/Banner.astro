@@ -6,23 +6,24 @@ import {
   TWITTER_URL,
   PHONE_NUMBER,
   YOUTUBE_URL,
+  BANNER
 } from "../consts";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 ---
 
 <div
   id="top"
-  class="w-full bg-gradient-to-r font-sans2 from-red-800 to-red-900 z-0 h-10 px-4 lg:px-0 text-white"
+  class="w-full bg-gradient-to-br font-sans2 from-indigo-950 to-blue-950 z-0 h-10 px-4 lg:px-0 text-white"
 >
   <div
     class="mx-auto flex max-w-[77rem] items-center align-middle h-full justify-between"
   >
     {
-      LINKEDIN_URL ||
+      (LINKEDIN_URL ||
         INSTAGRAM_URL ||
         FACEBOOK_URL ||
         TWITTER_URL ||
-        (YOUTUBE_URL && (
+        YOUTUBE_URL) && (
           <div class="flex items-center lg:ml-9 justify-center align-middle gap-x-3">
             {LINKEDIN_URL && (
               <a
@@ -109,10 +110,10 @@ import { FaPhoneSquareAlt } from "react-icons/fa";
               </a>
             )}
           </div>
-        ))
+        )
     }
     <p class="font-medium font-sans2 text-base tracking-wide hidden lg:block">
-      Aircraft Maintenance at Heritage Field (KPTW)
+      {BANNER}
     </p>
     <a
       href=`tel:${PHONE_NUMBER}`
