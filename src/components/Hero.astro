@@ -2,7 +2,7 @@
 const { data } = Astro.props;
 ---
 
-<section class="relative isolate overflow-hidden pt-14 min-h-screen bg-hero bg-contain">
+<section class="relative isolate overflow-hidden pt-14 min-h-screen bg-hero bg-cover">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto lg:mx-0 max-w-2xl py-28">
       <div class="mb-8 flex justify-center lg:justify-start">
@@ -24,7 +24,7 @@ const { data } = Astro.props;
         >
           {data.heading}
         </h1>
-        <h2 class="text-balance mt-4 text-3xl lg:text-4xl lg:leading-8 font-bold tracking-tight text-red-600">
+        <h2 class="text-balance mt-4 text-3xl lg:text-4xl lg:leading-8 font-bold tracking-tight text-indigo-950 lg:text-red-600">
           {data.subHeading}
         </h2>
         <p class="mt-8 text-pretty text-lg font-parag font-light text-gray-700">
