@@ -9,6 +9,8 @@ import {
   INSTAGRAM_URL,
   PHONE_NUMBER,
   LINKEDIN_URL,
+  TWITTER_URL,
+  YOUTUBE_URL,
   LOGO
 } from "../consts.ts";
 
@@ -105,7 +107,7 @@ const Navbar = ({ pathname }) => {
                 />
               </a>
               <div className="hidden lg:flex justify-end lg:w-[50%]">
-                <ul className="flex justify-between align-middle w-full items-center text-black">
+                <ul className="flex justify-end gap-16 align-middle w-full items-center text-black">
                   {navbarLinks.map((item, index) => (
                     <li
                       key={index}
@@ -374,52 +376,98 @@ const Navbar = ({ pathname }) => {
             <a href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</a>
           </div>
 
-          {FACEBOOK_URL ||
-            LINKEDIN_URL ||
-            (INSTAGRAM_URL && (
-              <div className="flex gap-3 mt-2 mb-16">
-                <a href={FACEBOOK_URL} target="_blank">
-                  <span className="sr-only">Facebook</span>
-                  <svg
-                    className="size-6 text-accent"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </a>
-                <a href={INSTAGRAM_URL} target="_blank">
-                  <span className="sr-only">Instagram</span>
-                  <svg
-                    className="size-6 text-accent"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </a>
-                <a href={LINKEDIN_URL} target="_blank">
-                  <span className="sr-only">LinkedIn</span>
-                  <svg
-                    viewBox="0 0 16 16"
-                    fill="currentColor"
-                    className="size-6 text-accent"
-                  >
-                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path>
-                  </svg>
-                </a>
-              </div>
-            ))}
+          {(LINKEDIN_URL ||
+        INSTAGRAM_URL ||
+        FACEBOOK_URL ||
+        TWITTER_URL ||
+        YOUTUBE_URL) && (
+          <div class="flex items-center lg:ml-9 justify-center align-middle gap-x-3">
+            {LINKEDIN_URL && (
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+                class="transition-colors duration-300 hover:text-blue-600 hover:scale-110"
+              >
+                <svg viewBox="0 0 16 16" fill="currentColor" class="h-5">
+                  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                </svg>
+              </a>
+            )}
+            {INSTAGRAM_URL && (
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                aria-label="Instagram"
+                title="Instagram"
+                class="transition-colors duration-300 hover:text-blue-600 hover:scale-110"
+              >
+                <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
+                  <circle cx="15" cy="15" r="4" />
+                  <path d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z" />
+                </svg>
+              </a>
+            )}
+            {FACEBOOK_URL && (
+              <a
+                href={FACEBOOK_URL}
+                target="_blank"
+                aria-label="Facebook"
+                title="Facebook"
+                class="transition-colors duration-300 hover:text-blue-600 hover:scale-110"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                  <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
+                </svg>
+              </a>
+            )}
+            {TWITTER_URL && (
+              <a
+                href={TWITTER_URL}
+                target="_blank"
+                aria-label="Twitter"
+                title="X"
+                class="transition-colors duration-300 hover:text-blue-600 hover:scale-110"
+              >
+                <svg
+                  class="size-7 -m-1 p-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="100"
+                  height="100"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M10.053,7.988l5.631,8.024h-1.497L8.566,7.988H10.053z M21,6v12	c0,1.657-1.343,3-3,3H6c-1.657,0-3-1.343-3-3V6c0-1.657,1.343-3,3-3h12C19.657,3,21,4.343,21,6z M17.538,17l-4.186-5.99L16.774,7	h-1.311l-2.704,3.16L10.552,7H6.702l3.941,5.633L6.906,17h1.333l3.001-3.516L13.698,17H17.538z" />
+                </svg>
+              </a>
+            )}
+            {YOUTUBE_URL && (
+              <a
+                href={YOUTUBE_URL}
+                target="_blank"
+                aria-label="Youtube"
+                title="Youtube"
+                class="transition-colors duration-300 hover:text-blue-600 hover:scale-110"
+              >
+                <svg
+                  class="size-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="100"
+                  height="100"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z" />
+                </svg>
+              </a>
+            )}
+          </div>
+        )}
         </div>
       </div>
     </nav>
