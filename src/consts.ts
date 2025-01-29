@@ -1,39 +1,39 @@
-// CHANGE Default title
+// Default title
 export const SITE_TITLE =
-  "Aircraft Maintenance Services in Pottstown, Pennsylvania | Penn Air Repair";
+  "Specialized Dementia and Alzheimer's Home Care in Sarasota, Florida | RIGHT ACCORD Private Duty Home Health Care";
 
-// CHANGE default meta description -> should only be used in homepage technically, but is there for a fallback in case a page is missed
+// Default meta description
 export const SITE_DESCRIPTION =
-  "Penn Air Repair specializes in providing top-notch aircraft maintenance and repair services, including engine overhauls, airframe inspections, and component replacements. Our team of experienced technicians is dedicated to ensuring the safety and reliability of your aircraft.";
+  "RIGHT ACCORD Private Duty Home Health Care offers compassionate, specialized in-home care services for seniors with dementia and Alzheimer's in Sarasota, Florida. Our trained caregivers provide personalized support to enhance the quality of life for your loved ones.";
 
-//SEO tip -> keyword + city 1
-//Should have between 5-10 different localities to mix and match keywords
-//typical keywords = how to become a pilot, flight school near, private pilot, discovery flight, introductory flight, instrument rating, commercial certificate, certified flight instructor, airline programs, how to become an airline pilot
-// CHANGE default keywords -> should only be used in homepage technically, but is there for a fallback in case a page is missed
+// Default keywords
 export const KEYWORDS =
-  "aircraft maintenance, aircraft repair, aircraft inspection, aircraft overhaul, aircraft parts, aviation services, turboprop maintenance, turboprop repair, turboprop inspection, turboprop overhaul, FAA certified repair station, aviation maintenance technician, aircraft engine overhaul, propeller overhaul, avionics repair, aircraft interior refurbishment, Pottstown aircraft maintenance, Pottstown aircraft repair, Pennsylvania aviation services";
+  "dementia care, home health care, private duty care, in-home care, elderly care, memory care, senior care, dementia support, caregiver services, dementia treatment, dementia care near me, home health care services, dementia care Sarasota, Alzheimer's care Sarasota, in-home senior care, specialized dementia services, Alzheimer's home care, senior care Sarasota, RIGHT ACCORD Home Health Care";
 
-export const OG_IMAGE = "/OG_image-PennAirRepair.webp";
+// Open Graph image
+export const OG_IMAGE = "";
+
+export const BANNER = "Specialized Dementia and Alzheimer's Home Care in Sarasota, Florida";
 
 export const LOCATIONS = [
   {
-    title: `Greater Kankakee Airport - IKK`,
-    address: "3310 W Ridge Pike",
-    city: "Pottstown",
-    state: "PA",
-    zip: "19464 ",
-    gMaps: "https://maps.app.goo.gl/q1SJrrPdmpFBcyjY7",
-    phone: "(610) 495-3070",
+    title: `Right Accord Private Duty-Home Health Care`,
+    address: "3900 Clark Rd SUITE B5",
+    city: "Sarasota",
+    state: "FL",
+    zip: "34233",
+    gMaps: "https://maps.app.goo.gl/kF5jzE2AsH3FR1Ws7",
+    phone: "(941) 366-0801",
   },
 ];
 
 // CHANGE client business info
-export const PHONE_NUMBER = "(610) 495-3070";
-export const ADDRESS_LINE_1 = "3310 W Ridge Pike";
-export const ADDRESS_LINE_2 = "Pottstown, Pennsylvania 19464 ";
-export const FACEBOOK_URL = null;
+export const PHONE_NUMBER = "(941) 366-0801";
+export const ADDRESS_LINE_1 = "3900 Clark Rd SUITE B5";
+export const ADDRESS_LINE_2 = "Sarasota, Florida 34233";
+export const FACEBOOK_URL = "https://www.facebook.com/RightAccord/";
 export const INSTAGRAM_URL = null;
-export const LINKEDIN_URL = null;
-export const YOUTUBE_URL = null;
+export const LINKEDIN_URL = "https://www.linkedin.com/company/right-accord-home-care/";
+export const YOUTUBE_URL = "https://www.youtube.com/channel/UCL2zO8c8QN3fQBYsrTbNyuA";
 export const TWITTER_URL = null;
-export const EMAIL_ADDRESS = "info@pennairrepair.com";
+export const EMAIL_ADDRESS = "info@rightaccordhealth.com";
