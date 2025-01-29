@@ -10,7 +10,7 @@ const { data } = Astro.props;
 
 <section class="bg-gradient-to-b from-gray-100 to-slate-100 py-32" id={data.id}>
   <div class="mx-auto max-w-2xl lg:max-w-7xl lg:px-8">
-    <h2 class="text-base text-center font-semibold text-red-700">
+    <h2 class="text-base text-center font-semibold text-indigo-700">
       {data.upperheading}
     </h2>
     <p
@@ -35,10 +35,10 @@ const { data } = Astro.props;
             class="relative px-8 py-12 lg:py-8 flex flex-col justify-start h-full"
           >
             <div class="flex justify-center items-center p-6 absolute inset-0">
-              <FaTools className="size-52 text-red-800/5" />
+              <img src="/src/assets/icons/icon-elder.svg" alt="" class="opacity-10">            
             </div>
             <p
-              class="mt-2 text-2xl font-medium tracking-tight text-red-900 max-lg:text-center"
+              class="mt-2 text-2xl font-medium tracking-tight text-indigo-900 max-lg:text-center"
             >
               {data.cards[0].title}
             </p>
@@ -76,11 +76,11 @@ const { data } = Astro.props;
           class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]"
         >
           <div class="flex justify-center items-center p-6 absolute inset-0">
-            <GiPowerGenerator className="size-52 text-red-800/5" />
+            <img src="/src/assets/icons/icon-facility.svg" alt="" class="opacity-10">            
           </div>
           <div class="px-8 py-12 lg:py-8 sm:px-10 sm:pt-10">
             <p
-              class="mt-2 text-2xl font-medium tracking-tight text-red-900 max-lg:text-center"
+              class="mt-2 text-2xl font-medium tracking-tight text-indigo-900 max-lg:text-center"
             >
               {data.cards[1].title}
             </p>
@@ -106,11 +106,11 @@ const { data } = Astro.props;
           class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]"
         >
           <div class="flex justify-center items-center p-6 absolute inset-0">
-            <TbPropeller className="size-52 text-red-800/5" />
+            <img src="/src/assets/icons/icon-insurance.svg" alt="" class="opacity-10">            
           </div>
           <div class="px-8 py-12 lg:py-8 sm:px-10 sm:pb-12 sm:pt-10">
             <p
-              class="mt-2 text-2xl font-medium tracking-tight text-red-900 max-lg:text-center"
+              class="mt-2 text-2xl font-medium tracking-tight text-indigo-900 max-lg:text-center"
             >
               {data.cards[2].title}
             </p>
@@ -151,10 +151,10 @@ const { data } = Astro.props;
             <div
               class="flex justify-center items-center p-6 absolute inset-0 top-20"
             >
-              <PiEngineFill className="size-52 text-red-800/5" />
+              <img src="/src/assets/icons/icon-staff.svg" alt="" class="opacity-10">            
             </div>
             <p
-              class="mt-2 text-2xl font-medium tracking-tight text-red-900 max-lg:text-center"
+              class="mt-2 text-2xl font-medium tracking-tight text-indigo-900 max-lg:text-center"
             >
               {data.cards[3].title}
             </p>
