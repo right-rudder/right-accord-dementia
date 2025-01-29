@@ -13,6 +13,8 @@ export const KEYWORDS =
 // Open Graph image
 export const OG_IMAGE = "";
 
+export const LOGO = "/right-accord-logo-solo.svg";
+
 export const BANNER = "Specialized Dementia and Alzheimer's Home Care in Sarasota, Florida";
 
 export const LOCATIONS = [
@@ -28,6 +30,7 @@ export const LOCATIONS = [
 ];
 
 // CHANGE client business info
+export const TITLE = "Right Accord Private Duty-Home Health Care";
 export const PHONE_NUMBER = "(941) 366-0801";
 export const ADDRESS_LINE_1 = "3900 Clark Rd SUITE B5";
 export const ADDRESS_LINE_2 = "Sarasota, Florida 34233";
