@@ -9,6 +9,7 @@ import {
   INSTAGRAM_URL,
   PHONE_NUMBER,
   LINKEDIN_URL,
+  LOGO
 } from "../consts.ts";
 
 const Navbar = ({ pathname }) => {
@@ -95,7 +96,7 @@ const Navbar = ({ pathname }) => {
                 className="hover:brightness-110 flex lg:h-24 justify-center align-middle items-center duration-200 ease-in-out w-full lg:w-1/5"
               >
                 <img
-                  src="/right-accord-logo-solo.svg"
+                  src={LOGO}
                   alt="RIGHT ACCORD logo"
                   aria-label="RIGHT ACCORD logo"
                   title="RIGHT ACCORD"
