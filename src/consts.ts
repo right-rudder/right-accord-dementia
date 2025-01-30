@@ -11,7 +11,7 @@ export const KEYWORDS =
   "dementia care, home health care, private duty care, in-home care, elderly care, memory care, senior care, dementia support, caregiver services, dementia treatment, dementia care near me, home health care services, dementia care Sarasota, Alzheimer's care Sarasota, in-home senior care, specialized dementia services, Alzheimer's home care, senior care Sarasota, RIGHT ACCORD Home Health Care";
 
 // Open Graph image
-export const OG_IMAGE = "";
+export const OG_IMAGE = "/right-accord-logo-solo.svg";
 
 export const LOGO = "/right-accord-logo-solo.svg";
 
