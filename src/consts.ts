@@ -4,7 +4,7 @@ export const SITE_TITLE =
 
 // Default meta description
 export const SITE_DESCRIPTION =
-  "RIGHT ACCORD Private Duty Home Health Care offers compassionate, specialized in-home care services for seniors with dementia and Alzheimer's in Sarasota, Florida. Our trained caregivers provide personalized support to enhance the quality of life for your loved ones.";
+  "Right Accord Private Duty Home Health Care offers compassionate, specialized in-home care services for seniors with dementia and Alzheimer's in Sarasota, Florida. Our trained caregivers provide personalized support to enhance the quality of life for your loved ones.";
 
 // Default keywords
 export const KEYWORDS =
