@@ -1,72 +1,72 @@
 const privacyPolicies = {
   data: {
-    heading: `Privacy Policy of<br /> Penn Air Repair`,
-    subheading: `Last updated: 10-24-2024`,
+    heading: `Privacy Policy of<br /> Right Accord`,
+    subheading: `Last updated: 01-29-2025`,
     content: [
       {
         heading: "Introduction",
         paragraphs: [
-          `Penn Air Repair operates the <a href="/">https://pennairrepair.com/</a> website, which is an aircraft maintenance company with addresses in Pottstown, PA.`,
-          "This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service, the Penn Air Repair website.",
-          "If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.",
-          `The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at <a href="/terms-of-service">https://pennairrepair.com/terms-of-service</a>, unless otherwise defined in this Privacy Policy.`,
+          `Right Accord operates the <a href="/">https://rightaccordhealth.com/</a> website, which provides home care services for seniors and individuals in need of personal assistance.`,
+          "This Privacy Policy outlines how we collect, use, and protect your personal information when you visit our website or use our services.",
+          "By using our website, you consent to the collection and use of information as described in this policy. We use your personal data to provide and enhance our services. Your information will not be shared except as described in this Privacy Policy.",
+          `The terms in this policy align with our <a href="/terms-of-service">Terms and Conditions</a>, unless otherwise specified.`,
         ],
       },
       {
         heading: "Information Collection and Use",
         paragraphs: [
-          "For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to your name, email, phone number, and postal address. The information that we collect will be used to contact or identify you.",
+          "To improve your experience and provide our services effectively, we may collect personally identifiable information, such as your name, email address, phone number, and mailing address. This information is used solely for communication and service-related purposes.",
         ],
       },
       {
         heading: "Log Data",
         paragraphs: [
-          "We want to inform you that whenever you visit our Service, we collect information that your browser sends to us that is called Log Data. This Log Data may include information such as your computer's Internet Protocol (“IP”) address, browser version, pages of our Service that you visit, the time and date of your visit, the time spent on those pages, and other statistics.",
+          "Whenever you visit our website, we collect information that your browser sends, known as Log Data. This may include your IP address, browser version, pages visited, time and date of access, time spent on pages, and other usage statistics.",
         ],
       },
       {
         heading: "Cookies",
         paragraphs: [
-          "Cookies are files with small amount of data that is commonly used an anonymous unique identifier. These are sent to your browser from the website that you visit and are stored on your computer's hard drive.",
-          "Our website uses these “cookies” to collection information and to improve our Service. You have the option to either accept or refuse these cookies, and know when a cookie is being sent to your computer. If you choose to refuse our cookies, you may not be able to use some portions of our Service.",
-          "For more general information on cookies, please read “What Are Cookies”. ",
+          "Cookies are small files stored on your device that help improve website functionality. Our website uses cookies to enhance user experience and analyze site performance.",
+          "You can choose to accept or decline cookies. However, disabling cookies may limit certain website features.",
+          "For more details about cookies, please refer to publicly available resources such as 'What Are Cookies?'.",
         ],
       },
       {
         heading: "Service Providers",
         paragraphs: [
-          "We may employ third-party companies and individuals due to the following reasons: To facilitate our Service, to provide the Service on our behalf, to perform Service-related services, or to assist us in analyzing how our Service is used.",
-          "We want to inform our Service users that these third parties may have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.",
+          "We may engage third-party service providers to assist with website functionality, analytics, and service delivery.",
+          "These providers may have access to your personal information, but they are contractually obligated to use it only for the intended purpose and protect its confidentiality.",
         ],
       },
       {
         heading: "Security",
         paragraphs: [
-          "We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.",
+          "We take the security of your personal information seriously and implement industry-standard measures to protect it. However, no online data transmission is completely secure, and we cannot guarantee absolute security.",
         ],
       },
       {
         heading: "Links to Other Sites",
         paragraphs: [
-          "Our Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.",
+          "Our website may include links to third-party sites. We are not responsible for the content, privacy policies, or security practices of external websites. We encourage you to review their privacy policies before providing personal information.",
         ],
       },
       {
         heading: "Children's Privacy",
         paragraphs: [
-          "Our Services do not address anyone under the age of 13. We do not knowingly collect personal identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.",
+          "Our services are not intended for individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we discover such information has been provided, we will take immediate steps to delete it. If you believe your child has provided personal data, please contact us.",
         ],
       },
       {
         heading: "Changes to This Privacy Policy",
         paragraphs: [
-          "We may update our Privacy Policy from time to time. Thus, we advise you to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately, after they are posted on this page.",
+          "We may update this Privacy Policy periodically. Changes will be posted on this page, and updates take effect immediately upon publication. We encourage you to review this policy regularly.",
         ],
       },
       {
         heading: "Contact Us",
         paragraphs: [
-          `If you have any questions or suggestions about our Privacy Policy, do not hesitate to <a href="/#contact-us">contact us</a>.`,
+          `For any questions or concerns about our Privacy Policy, please <a href="/#contact-us">contact us</a>.`,
         ],
       },
     ],
