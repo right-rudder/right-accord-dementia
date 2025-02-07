@@ -36,8 +36,8 @@
   }
 
   .bg-hero{
-    background-image:linear-gradient(to top, white 0%, rgba(0, 0, 0, 0.1) 50%, white 100%), linear-gradient(to right, white 0%, transparent 40%, transparent 90%, white 100%), url(/src/assets/images/man-doing-activities-with-elderly.jpg);
-    background-position: 60%;
+    background-image:linear-gradient(to top, white 0%, rgba(0, 0, 0, 0.1) 50%, white 100%), linear-gradient(to right, white 0%, transparent 80%, white 100%), url(/src/assets/images/man-doing-activities-with-elderly.jpg);
+    background-position: 70%;
   }
 }
 
