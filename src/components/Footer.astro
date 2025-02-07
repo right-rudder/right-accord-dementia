@@ -4,10 +4,13 @@ import ImageComp from "./ImageComp.astro";
 import { Image } from "astro:assets";
 import { SITE_DESCRIPTION, LOGO, TITLE } from "../consts";
 
+const date = new Date();
+const year = date.getFullYear();
+
 const links = footerLinks;
 ---
 
-<footer class="bg-gradient-to-b from-white to-indigo-50" id="footer">
+<footer class="bg-gradient-to-b from-white to-purple-50" id="footer">
   <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
     <nav
       class="-mb-6 flex flex-wrap justify-center text-center lg:gap-x-12 gap-y-3 text-base/6"
@@ -17,7 +20,7 @@ const links = footerLinks;
         links.map((link) => (
           <a
             href={link.link}
-            class="text-gray-500 font-thin w-full md:w-auto hover:text-indigo-800 duration-150"
+            class="text-gray-500 font-thin w-full md:w-auto hover:text-purple-800 duration-150"
           >
             {link.name}
           </a>
@@ -36,13 +39,13 @@ const links = footerLinks;
     <div class="mt-5 flex justify-center align-middle items-center w-full">
       <a
         href="/privacy-policy"
-        class="mr-4 transition-colors duration-300 text-sm text-gray-400 hover:text-indigo-700"
+        class="mr-4 transition-colors duration-300 text-sm text-gray-400 hover:text-purple-700"
         >Privacy Policy
       </a>
       <span class="text-blue-800 text-sm"> &#x2022; </span>
       <a
         href="/terms-of-service"
-        class="ml-4 transition-colors duration-300 text-sm text-gray-400 hover:text-indigo-700"
+        class="ml-4 transition-colors duration-300 text-sm text-gray-400 hover:text-purple-700"
         >Terms of Service
       </a>
     </div>
@@ -52,7 +55,7 @@ const links = footerLinks;
       <p>{SITE_DESCRIPTION}</p>
     </div>
     <p class="mt-6 text-center text-base font-semibold text-gray-400">
-      &copy; 2024 {TITLE}. All Rights Reserved.
+      &copy; {year} {TITLE}. All Rights Reserved.
     </p>
     <a
       href="https://rightruddermarketing.com/"
