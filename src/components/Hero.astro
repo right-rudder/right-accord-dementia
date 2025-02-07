@@ -7,7 +7,7 @@ const { data } = Astro.props;
     <div class="mx-auto lg:mx-0 max-w-2xl py-28">
       <div class="mb-8 flex justify-center lg:justify-start">
         <div
-          class="relative rounded-full px-3 py-1 text-sm/6 text-black ring-1 font-bold bg-indigo-300/10 ring-indigo-900 hover:ring-indigo-500/90 hover:scale-105 duration-150"
+          class="relative rounded-full px-3 py-1 text-sm/6 text-black ring-1 font-bold bg-purple-300/10 ring-purple-900 hover:ring-purple-500/90 hover:scale-105 duration-150"
         >
           Our Care Approach. <a
             href="#how-we-do-it"
@@ -20,12 +20,13 @@ const { data } = Astro.props;
       </div>
       <div class="text-center lg:text-left">
         <h1
-          class="text-balance text-5xl lg:text-7xl lg:leading-[3.5rem] font-bold tracking-tight text-indigo-900"
+          class="text-balance text-5xl lg:text-7xl lg:leading-[3.5rem] font-bold tracking-tight text-purple-900"
         >
           {data.heading}
         </h1>
-        <h2 class="text-balance mt-4 text-3xl lg:text-4xl lg:leading-8 font-bold tracking-tight text-indigo-950 lg:text-red-600">
-          {data.subHeading}
+        <h2 class="text-balance mt-4 text-3xl lg:text-4xl lg:leading-8 font-bold tracking-tight text-yellow-600"
+        set:html={data.subHeading}
+        >
         </h2>
         <p class="mt-8 text-pretty text-lg font-parag font-light text-gray-700">
           {data.description}
@@ -35,7 +36,7 @@ const { data } = Astro.props;
         >
           <a
             href="#contact-us"
-            class="rounded-md bg-indigo-800 duration-200 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+            class="rounded-md bg-purple-800 duration-200 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-400"
             >Contact Us</a
           >
         </div>
