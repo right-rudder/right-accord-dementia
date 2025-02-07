@@ -4,12 +4,12 @@ const { data } = Astro.props;
 
 <section class="relative isolate overflow-hidden pt-14 min-h-screen bg-hero bg-cover">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto lg:mx-0 max-w-2xl py-28">
+    <div class="mx-auto lg:mx-0 max-w-2xl py-28 h-full bg-white/30">
       <div class="mb-8 flex justify-center lg:justify-start">
         <div
           class="relative rounded-full px-3 py-1 text-sm/6 text-black ring-1 font-bold bg-purple-300/10 ring-purple-900 hover:ring-purple-500/90 hover:scale-105 duration-150"
         >
-          Our Care Approach. <a
+          Care Approach. <a
             href="#how-we-do-it"
             class="font-light ml-2 text-black/70"
             ><span class="absolute inset-0" aria-hidden="true"></span>Read more <span
@@ -18,17 +18,17 @@ const { data } = Astro.props;
           >
         </div>
       </div>
-      <div class="text-center lg:text-left">
+      <div class="text-center lg:text-left ">
         <h1
           class="text-balance text-5xl lg:text-7xl lg:leading-[3.5rem] font-bold tracking-tight text-purple-900"
         >
           {data.heading}
         </h1>
-        <h2 class="text-balance mt-4 text-3xl lg:text-4xl lg:leading-8 font-bold tracking-tight text-yellow-600"
+        <h2 class="text-balance mt-4 text-4xl lg:text-5xl font-bold text-yellow-500 brightness-90"
         set:html={data.subHeading}
         >
         </h2>
-        <p class="mt-8 text-pretty text-lg font-parag font-light text-gray-700">
+        <p class="mt-8 text-pretty text-xl font-parag text-gray-700">
           {data.description}
         </p>
         <div
