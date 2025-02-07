@@ -10,7 +10,7 @@ import ProviderFor from "../components/ProviderFor.astro";
 const landingData = {
   hero: {
     heading: `Understanding Dementia Care`,
-    subHeading: `<span class="drop-shadow-md">Resources and Support for Memory Loss and Cognitive Decline</span>`,
+    subHeading: `Resources and Support for Memory Loss and Cognitive Decline`,
     description: `Dementia affects millions of individuals and their families. Understanding the condition and available care options is essential for providing the right support. Explore how specialized dementia care can enhance safety, independence, and quality of life.`,
   },
 
@@ -119,6 +119,108 @@ const landingData = {
 <BaseLayout>
   <Hero data={landingData.hero}/>
   <ProviderFor data={landingData.providerFor} />
+      <!-- Container -->
+      <div class="max-w-4xl mx-auto px-6 py-10">
+        <!-- Title -->
+        <h1 class="text-3xl md:text-4xl font-bold text-purple-700 text-center mb-6">What is Dementia?</h1>
+
+        <!-- Introduction -->
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Dementia is a condition that affects the brain and makes it harder for people to remember things, think clearly, and do everyday activities. It is not a single disease but a general term for a group of symptoms caused by different brain disorders. People with dementia may have trouble remembering recent events, making decisions, or recognizing familiar places and faces. Over time, it can become difficult for them to take care of themselves without help.
+
+        </p>
+
+        <!-- How Dementia Affects the Brain -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">How Does Dementia Affect the Brain?</h2>
+            <p class="text-gray-700 leading-relaxed">
+              The brain is like a computer that helps us remember, learn, and make choices. It sends signals to control everything we do, from speaking to moving. Dementia damages brain cells, making it harder for these signals to work properly. As a result, a person may forget simple things, get confused easily, or struggle with daily tasks.
+            </br>
+              Dementia mostly affects older adults, but it is not a normal part of aging. Some memory loss is common as people grow older, but dementia is different because it gets worse over time and affects thinking, behavior, and emotions in a serious way.
+              
+                          </p>
+        </section>
+
+        <!-- Types of Dementia -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">Types of Dementia</h2>
+            <p class="text-gray-700 mb-3">There are several types of dementia, but the most common ones include:</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li><strong>Alzheimer’s Disease:</strong> This is the most common type of dementia. It causes slow memory loss, confusion, and difficulty speaking or understanding things. Scientists believe that sticky clumps of protein build up in the brain and stop it from working properly.
+                </li>
+                <li><strong>Vascular Dementia:</strong> This happens when blood flow to the brain is blocked or reduced, usually because of strokes or other blood vessel problems. People with vascular dementia may have trouble thinking quickly, making decisions, or remembering things.
+
+                </li>
+                <li><strong>Lewy Body Dementia:</strong> This type of dementia happens when tiny clumps of protein called Lewy bodies build up in the brain. It can cause memory loss, confusion, and even hallucinations (seeing or hearing things that aren’t there).</li>
+                <li><strong>Frontotemporal Dementia:</strong> This affects the front and side parts of the brain, which control behavior, personality, and speech. People with this type of dementia may act differently than they used to, have trouble speaking, or make poor decisions.</li>
+            </ul>
+            <p class="text-gray-700 mt-3">Each type of dementia affects people in different ways, but they all get worse over time.</p>
+        </section>
+
+        <!-- Early Signs -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">Early Signs of Dementia</h2>
+            <p class="text-gray-700 mb-3">Dementia starts slowly, and people may not notice the signs at first. Some early symptoms include:</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Memory Loss – Forgetting important dates, names, or recent events.
+                </li>
+                <li>Difficulty with Tasks – Struggling to follow steps for cooking, paying bills, or getting dressed.</li>
+                <li>Confusion – Not recognizing familiar places or getting lost easily.</li>
+                <li>Trouble Speaking – Forgetting words or repeating the same things.
+                </li>
+                <li>Changes in Mood – Feeling sad, anxious, or easily frustrated.</li>
+                <li>Poor Judgment – Making unusual decisions, like wearing the wrong clothes for the weather.</li>
+            </ul>
+            <p class="text-gray-700 mt-3">If someone is showing these signs, it’s important to see a doctor. Catching dementia early can help people get the care and support they need.</p>
+        </section>
+
+        <!-- Causes of Dementia -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">What Causes Dementia?</h2>
+            <p class="text-gray-700">
+                Dementia is caused by brain cell damage. Factors that increase the risk include aging, family history, health problems like high blood pressure, brain injuries, and an unhealthy lifestyle.
+            </p>
+        </section>
+
+        <!-- Diagnosis -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">How is Dementia Diagnosed?</h2>
+            <p class="text-gray-700">
+              There is no single test for dementia. Doctors check for it by asking questions about memory, problem-solving, and daily activities. They may also do brain scans or blood tests to rule out other health problems. If a person is diagnosed with dementia, doctors can help them and their family understand what to expect and how to manage symptoms.
+            </p>
+        </section>
+
+        <!-- Treatment and Cure -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">Is There a Cure for Dementia?</h2>
+            <p class="text-gray-700">
+              Right now, there is no cure for dementia, but doctors can give medicines and treatments to help with symptoms. These treatments may slow down memory loss and help people stay independent for as long as possible. Scientists are working hard to find better treatments and, one day, a cure.
+            </p>
+        </section>
+
+        <!-- Helping People with Dementia -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">How Can We Help People with Dementia?</h2>
+            <p class="text-gray-700 mb-3">Supporting someone with dementia can make a big difference. Here are some ways to help:</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li><strong>Be Patient:</strong> People with dementia may forget things or repeat themselves. Stay calm and help them kindly.</li>
+                <li><strong>Keep Things Simple:</strong> Give clear instructions and avoid too many choices at once.</li>
+                <li><strong>Create a Safe Space:</strong> Remove trip hazards and help with organization.</li>
+                <li><strong>Encourage Activities:</strong> Playing music, looking at old photos, or doing simple crafts can help keep their mind active.</li>
+                <li><strong>Stay in Touch:</strong> Spend time with them and remind them they are loved and cared for.</li>
+            </ul>
+            <p class="text-gray-700 mt-3">Dementia can be challenging, but with support, people can still have a good quality of life. Families, friends, and caregivers all play an important role in making sure their loved ones feel safe and valued.</p>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">Conclusion</h2>
+            <p class="text-gray-700">
+              Dementia is a condition that affects memory, thinking, and daily life. It happens when brain cells are damaged, and it gets worse over time. While there is no cure, early diagnosis and good care can help people live as comfortably as possible. Learning about dementia is important so we can support those who have it and work toward a future where better treatments are available.
+            </p>
+        </section>
+
+    </div>
   <LogoCloudRight data={landingData.partners} />
   <BentoGrid data={landingData.services} />
   <ContentBg data={landingData.howWeDoIt} />
