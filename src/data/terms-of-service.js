@@ -1,67 +1,72 @@
 const terms = {
   data: {
-    heading: `Terms of Service of<br /> Penn Air Repair`,
-    subheading: `Last updated: 09-24-2024`,
+    heading: `Terms of Service of<br /> Right Accord`,
+    subheading: `Last updated: 01-29-2025`,
     content: [
       {
-        heading: "Terms",
+        heading: "Agreement to Terms",
         paragraphs: [
-          "By accessing this website, accessible from https://pennairrepair.com/, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.",
+          "By accessing this website, available at https://rightaccord.com/, you agree to be bound by these Terms of Service and comply with all applicable local laws. If you do not agree to these terms, you are not authorized to use this website. The content on this website is protected by copyright and trademark laws.",
         ],
       },
       {
-        heading: "Use License",
+        heading: "License to Use",
         paragraphs: [
-          "Permission is granted to temporarily download one copy of the materials on Penn Air Repair Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials, use the materials for any commercial purpose or for any public display, attempt to reverse engineer any software contained on Penn Air Repair Website, remove any copyright or other proprietary notations from the materials, or transfer the materials to another person or “mirror” the materials on any other server.",
-          "This will let Penn Air Repair to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format.",
+          "Right Accord grants you a limited, non-exclusive, non-transferable license to temporarily download one copy of the materials on this website for personal, non-commercial viewing only. This license does not transfer ownership and prohibits you from:",
+          "• Modifying or copying the materials",
+          "• Using the materials for any commercial purpose or public display",
+          "• Attempting to reverse-engineer any software on the website",
+          "• Removing copyright or proprietary notices",
+          "• Transferring the materials to another person or duplicating them on another server",
+          "Right Accord reserves the right to terminate this license if you violate these restrictions. Upon termination, you must delete any downloaded materials in your possession, whether in electronic or printed format.",
         ],
       },
       {
         heading: "Disclaimer",
         paragraphs: [
-          "All the materials on Penn Air Repair Website are provided “as is”. Penn Air Repair makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, Penn Air Repair does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.",
+          "The materials on this website are provided 'as is' without warranties of any kind, either express or implied. Right Accord does not guarantee the accuracy, reliability, or completeness of the materials or their suitability for any specific purpose. Use of the website is at your own risk.",
         ],
       },
       {
-        heading: "Limitations",
+        heading: "Limitations of Liability",
         paragraphs: [
-          "Penn Air Repair or its suppliers will not be hold accountable for any damages that will arise with the use or inability to use the materials on Penn Air Repair Website, even if Penn Air Repair or an authorized representative of this Website has been notified, orally or written, of the possibility of such damage. Some jurisdiction does not allow limitations on implied warranties or limitations of liability for incidental damages, these limitations may not apply to you.",
+          "Right Accord and its affiliates are not responsible for any damages arising from the use or inability to use this website, even if we have been advised of the possibility of such damages. Certain jurisdictions do not allow limitations on implied warranties or liability for incidental damages, so some of these limitations may not apply to you.",
         ],
       },
       {
-        heading: "Revisions and Errata",
+        heading: "Accuracy of Information",
         paragraphs: [
-          "The materials appearing on Penn Air Repair Website may include technical, typographical, or photographic errors. Penn Air Repair will not promise that any of the materials in this Website are accurate, complete, or current. Penn Air Repair may change the materials contained on its Website at any time without notice. Penn Air Repair does not make any commitment to update the materials.",
+          "The content on this website may include technical, typographical, or photographic errors. Right Accord does not guarantee that any information is accurate, complete, or up to date. We may update content at any time without notice but are not obligated to do so.",
         ],
       },
       {
-        heading: "Links",
+        heading: "Third-Party Links",
         paragraphs: [
-          "Penn Air Repair has not reviewed all of the sites linked to its Website and is not responsible for the contents of any such linked site. The presence of any link does not imply endorsement by Penn Air Repair of the site. The use of any linked website is at the user's own risk.",
+          "This website may contain links to external sites not operated by Right Accord. We do not review or endorse these third-party websites and are not responsible for their content or privacy practices. Accessing linked websites is at your own risk.",
         ],
       },
       {
-        heading: "Site Terms of Use Modifications",
+        heading: "Modifications to Terms",
         paragraphs: [
-          "Penn Air Repair may revise these Terms of Use for its Website at any time without prior notice. By using this Website, you are agreeing to be bound by the current version of these Terms and Conditions of Use.",
+          "Right Accord reserves the right to modify these Terms of Service at any time without prior notice. By continuing to use the website after updates are posted, you agree to be bound by the revised terms.",
         ],
       },
       {
-        heading: "Your Privacy",
+        heading: "Privacy Policy",
         paragraphs: [
-          `Please read our <a href="/privacy-policy">Privacy Policy</a>.`,
+          `For details on how we collect, use, and protect your personal information, please review our <a href="/privacy-policy">Privacy Policy</a>.`,
         ],
       },
       {
         heading: "Governing Law",
         paragraphs: [
-          "Any claim related to Penn Air Repair Website shall be governed by the laws of us without regards to its conflict of law provisions.",
+          "These Terms of Service are governed by the laws of [State/Country], without regard to conflict of law principles. Any disputes arising from these terms shall be resolved in the courts of [State/Country].",
         ],
       },
       {
         heading: "Contact Us",
         paragraphs: [
-          `If you have any questions or suggestions about our Terms of Service, do not hesitate to <a href="/#contact-us">contact us</a>.`,
+          `If you have any questions about these Terms of Service, please <a href="/#contact-us">contact us</a>.`,
         ],
       },
     ],
