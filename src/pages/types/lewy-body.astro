@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContentBg from "../../components/Content-bg.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import Header from "../../components/Header.astro";
+
+const landingData = {
+  howWeDoIt: {
+    id: "how-we-do-it",
+    imagePath: "/src/assets/images/how-we-do-it.jpg",
+    imageAlt: "Dementia care approach",
+    upperheading: "Approaches to Dementia Care",
+    heading: "Key Considerations for Care",
+    sections: [
+      {
+        description: `The Role of In-Home Care`,
+        paragraph:
+          "Individuals with vascular dementia benefit from a structured routine and assistance with daily activities. In-home care can provide cognitive stimulation and support to manage symptoms.",
+      },
+      {
+        description: `Developing a Personalized Care Plan`,
+        paragraph:
+          "Care plans should focus on controlling underlying vascular risk factors, such as hypertension and diabetes, while providing necessary cognitive and emotional support.",
+      },
+      {
+        description: `Long-Term Considerations`,
+        paragraph:
+          "Since vascular dementia progresses differently for each individual, ongoing assessments help determine the right level of care as symptoms evolve.",
+      },
+    ],
+  },
+  header: {
+    imagePath: "/src/assets/care-provider-talking-with-senior-patient-outside.jpg",
+    imageAlt: "care provider talking with senior patient outside",
+    headerH1: "Lewy Body Dementia",
+    paragraph: "Lewy body dementia is a progressive disease characterized by cognitive decline, visual hallucinations, and movement difficulties. It shares symptoms with both Alzheimer’s and Parkinson’s disease.",
+    buttons: [{ name: "Contact", link: "#contact-us" }]
+  }
+};
+---
+
+<BaseLayout
+  siteTitle="Understanding Lewy Body Dementia | Causes, Symptoms & Care"
+  siteDescription="Learn about Lewy body dementia, its symptoms, causes, and treatment options. Discover caregiving strategies for managing cognitive and movement-related challenges."
+  keywords="Lewy body dementia, cognitive decline, Parkinson’s dementia, memory loss, dementia symptoms, senior care, caregiving for dementia, movement disorders"
+>
+  <Header data={landingData.header} />
+  <div class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-purple-900 mb-6">Lewy Body Dementia: Symptoms, Causes, and Care Approaches</h1>
+
+    <section class="mb-8">
+        <p class="text-lg text-gray-700">
+            Lewy body dementia is caused by abnormal protein deposits (Lewy bodies) in the brain, affecting cognitive function, movement, and behavior. It shares characteristics with both Alzheimer’s and Parkinson’s disease.
+        </p>
+    </section>
+
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Key Symptoms</h2>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
+            <li><span class="font-semibold">Visual Hallucinations:</span> Seeing things that are not there.</li>
+            <li><span class="font-semibold">Fluctuating Cognition:</span> Periods of confusion followed by clarity.</li>
+            <li><span class="font-semibold">Motor Symptoms:</span> Parkinsonian movement issues like tremors.</li>
+        </ul>
+    </section>
+
+  </div>
+  <ContentBg data={landingData.howWeDoIt} />
+  <ContactForm />
+</BaseLayout>
