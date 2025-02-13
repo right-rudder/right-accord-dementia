@@ -1,0 +1,48 @@
+---
+import ImageComp from "./ImageComp.astro";
+
+const { data } = Astro.props;
+---
+
+<section class="relative lg:py-20" id={data.id}>
+  <div class="absolute inset-0 bg-gradient-to-br z-0 from-white/60 to-white/80">
+  </div>
+  <ImageComp
+    imagePath={data.imagePath}
+    imageAlt={data.imageAlt}
+    quality={100}
+    styles="absolute inset-0 -z-10 object-cover w-full h-full"
+  />
+  <div class="flex justify-center lg:justify-end max-w-7xl">
+    <div
+      class="bg-gradient-to-br from-gray-200/20 via-white/30 to-gray-200/20 backdrop-blur-lg py-16 px-10 lg:rounded-md lg:shadow-xl ring-2 ring-white/40"
+    >
+      <div class="w-full max-w-lg text-center lg:text-left">
+        <h2 class="text-lg font-semibold text-purple-700">
+          {data.upperheading}
+        </h2>
+        <p
+          class="mt-0 text-pretty text-4xl font-semibold tracking-tight text-black lg:text-6xl"
+        >
+          {data.heading}
+        </p>
+        {data.sections.map((section) => (
+          <h4
+            class="mt-4 text-lg/7 text-gray-700 font-bold font-parag"
+            set:html={section.description}
+          />
+          <p class="mt-1 mb-4 text-lg/6 text-gray-700 font-parag">{section.paragraph}</p>
+        ))}
+        {
+          data.cta && (
+            <div class="mt-12">
+              <a href={data.cta.link} class="btn-primary">
+                {data.cta.text}
+              </a>
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>

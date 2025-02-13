@@ -1,123 +1,228 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import ContentBg from "../components/Content-bg.astro";
+import BentoGrid from "../components/BentoGrid.astro";
+import ContactForm from "../components/ContactForm.astro";
+import LogoCloudRight from "../components/LogoCloudRight.astro";
+import ProviderFor from "../components/ProviderFor.astro";
+
+const landingData = {
+  hero: {
+    heading: `Understanding Dementia Care`,
+    subHeading: `Resources and Support for Memory Loss and Cognitive Decline`,
+    description: `Dementia affects millions of individuals and their families. Understanding the condition and available care options is essential for providing the right support. Explore how specialized dementia care can enhance safety, independence, and quality of life.`,
+  },
+
+  providerFor: {
+    title: "Recognized by Leading Organizations:",
+    logos: [
+      {
+        imagePath: "/src/assets/partners/alz.webp",
+        imageAlt: "Alz.org Logo",
+        link: "https://www.alz.org/",
+      },
+      {
+        imagePath: "/src/assets/partners/lakewood-ranch-mc.webp",
+        imageAlt: "Lakewood Ranch Medical Center Logo",
+        link: "https://www.lakewoodranchmedicalcenter.com/",
+      },
+      {
+        imagePath: "/src/assets/partners/department-of-elder-affairs.png",
+        imageAlt: "Department of Elder Affairs Logo",
+        link: "https://elderaffairs.org/",
+      },
+    ],
+  },
+
+  partners: {
+    id: "partners",
+    heading: "Commitment to Dementia Care",
+    description:
+      "Providing care for someone with dementia requires a deep understanding of the condition and a thoughtful approach. Many organizations specialize in dementia research, advocacy, and support for caregivers. Learning about available resources can help families make informed decisions about care options.",
+    logos: [
+      {
+        imagePath: "/src/assets/partners/partners-logo_mv9awk_c_scale,w_554.jpg",
+        imageAlt: "Partners logos",
+      },
+    ],
+  },
+
+  services: {
+    id: "our-services",
+    upperheading: "Dementia Care Services",
+    heading: "Understanding Support Options",
+    description: `Dementia care includes a variety of support services designed to help individuals maintain their well-being and independence. These services can range from in-home assistance to memory care programs that provide structured cognitive engagement. Learn more about <a href="https://rightaccordhealth.com/specialty-care/alzheimers-dementia-care" target="_blank" class="font-semibold text-purple-800 hover:underline">dementia care options</a> and what to consider when selecting the right approach.`,
+    cards: [
+      {
+        imagePath: "/src/assets/images/right-accord-health-florida-live-in-home-1.jpg",
+        imageAlt: "Caregiver assisting senior",
+        title: "Personalized Care Approaches",
+        descriptions: [
+          "Every individual with dementia experiences unique challenges. Care plans should be tailored to their specific needs, emphasizing safety, comfort, and engagement.",
+          "Caregivers play a vital role in creating a structured environment that reduces confusion and anxiety while promoting a sense of routine.",
+        ],
+      },
+      {
+        title: "Cognitive and Memory Support",
+        descriptions: [
+          "Engaging activities can help slow cognitive decline and maintain daily skills. Structured routines, memory exercises, and familiar environments contribute to improved quality of life.",
+          "Specialized dementia care programs often incorporate reminiscence therapy, music therapy, and social interaction to support cognitive health.",
+        ],
+      },
+      {
+        title: "Ensuring Safety and Supervision",
+        descriptions: [
+          "Dementia care includes strategies to reduce risks such as wandering, falls, and medication mismanagement. Supervision and modifications to the living space can enhance safety.",
+          "Technology, including GPS tracking and automated reminders, can assist families in monitoring and supporting loved ones with dementia.",
+        ],
+      },
+      {
+        imagePath: "/src/assets/images/main-image_senior-care-advisor.jpg",
+        imageAlt: "Family support for dementia care",
+        title: "Support for Families",
+        descriptions: [
+          "Caring for a loved one with dementia can be emotionally and physically demanding. Accessing educational resources and support groups can help families navigate the challenges.",
+          "Understanding the progression of dementia allows families to plan for future care needs, including home adjustments, financial planning, and professional assistance.",
+        ],
+      },
+    ],
+  },
+
+  howWeDoIt: {
+    id: "how-we-do-it",
+    imagePath: "/src/assets/images/how-we-do-it.jpg",
+    imageAlt: "Dementia care approach",
+    upperheading: "Approaches to Dementia Care",
+    heading: "Key Considerations for Care",
+    sections: [
+      {
+        description: `The Role of In-Home Care`,
+        paragraph:
+          "Many families prefer in-home care to provide familiar surroundings and minimize stress for individuals with dementia. Caregivers assist with daily activities, safety monitoring, and emotional support.",
+      },
+      {
+        description: `Developing a Personalized Care Plan`,
+        paragraph:
+          "Assessing an individual's needs helps determine the right level of support. A structured care plan should balance independence with necessary assistance.",
+      },
+      {
+        description: `Long-Term Considerations`,
+        paragraph:
+          "Dementia is a progressive condition, and care needs will change over time. Families should explore long-term care options, including memory care facilities and advanced medical support when necessary.",
+      },
+    ],
+  },
+};
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<svg
-			class="astro-a"
-			width="495"
-			height="623"
-			viewBox="0 0 495 623"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			aria-hidden="true"
-		>
-			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
-				d="M167.19 364.254C83.4786 364.254 0 404.819 0 404.819C0 404.819 141.781 19.4876 142.087 18.7291C146.434 7.33701 153.027 0 162.289 0H332.441C341.703 0 348.574 7.33701 352.643 18.7291C352.92 19.5022 494.716 404.819 494.716 404.819C494.716 404.819 426.67 364.254 327.525 364.254L264.41 169.408C262.047 159.985 255.147 153.581 247.358 153.581C239.569 153.581 232.669 159.985 230.306 169.408L167.19 364.254ZM160.869 530.172C160.877 530.18 160.885 530.187 160.894 530.195L160.867 530.181C160.868 530.178 160.868 530.175 160.869 530.172ZM136.218 411.348C124.476 450.467 132.698 504.458 160.869 530.172C160.997 529.696 161.125 529.242 161.248 528.804C161.502 527.907 161.737 527.073 161.917 526.233C165.446 509.895 178.754 499.52 195.577 500.01C211.969 500.487 220.67 508.765 223.202 527.254C224.141 534.12 224.23 541.131 224.319 548.105C224.328 548.834 224.337 549.563 224.347 550.291C224.563 566.098 228.657 580.707 237.264 593.914C245.413 606.426 256.108 615.943 270.749 622.478C270.593 621.952 270.463 621.508 270.35 621.126C270.045 620.086 269.872 619.499 269.685 618.911C258.909 585.935 266.668 563.266 295.344 543.933C298.254 541.971 301.187 540.041 304.12 538.112C310.591 533.854 317.059 529.599 323.279 525.007C345.88 508.329 360.09 486.327 363.431 457.844C364.805 446.148 363.781 434.657 359.848 423.275C358.176 424.287 356.587 425.295 355.042 426.275C351.744 428.366 348.647 430.33 345.382 431.934C303.466 452.507 259.152 455.053 214.03 448.245C184.802 443.834 156.584 436.019 136.218 411.348Z"
-				fill="url(#paint0_linear_1805_24383)"></path>
-			<defs>
-				<linearGradient
-					id="paint0_linear_1805_24383"
-					x1="247.358"
-					y1="0"
-					x2="247.358"
-					y2="622.479"
-					gradientUnits="userSpaceOnUse"
-				>
-					<stop stop-opacity="0.9"></stop>
-					<stop offset="1" stop-opacity="0.2"></stop>
-				</linearGradient>
-			</defs>
-		</svg>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<BaseLayout>
+  <Hero data={landingData.hero}/>
+  <ProviderFor data={landingData.providerFor} />
+      <!-- Container -->
+      <div class="max-w-4xl mx-auto px-6 py-10 text-lg">
+        <!-- Title -->
+        <h1 class="text-3xl md:text-4xl font-bold text-purple-700 text-center mb-6">What is Dementia?</h1>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style>
+        <!-- Introduction -->
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Dementia is a condition that affects the brain and makes it harder for people to remember things, think clearly, and do everyday activities. It is not a single disease but a general term for a group of symptoms caused by different brain disorders. People with dementia may have trouble remembering recent events, making decisions, or recognizing familiar places and faces. Over time, it can become difficult for them to take care of themselves without help.
+
+        </p>
+
+        <!-- How Dementia Affects the Brain -->
+        <section class="mb-8 text-lg">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">How Does Dementia Affect the Brain?</h2>
+            <p class="text-gray-700 leading-relaxed">
+              The brain is like a computer that helps us remember, learn, and make choices. It sends signals to control everything we do, from speaking to moving. Dementia damages brain cells, making it harder for these signals to work properly. As a result, a person may forget simple things, get confused easily, or struggle with daily tasks.
+            </br>
+              Dementia mostly affects older adults, but it is not a normal part of aging. Some memory loss is common as people grow older, but dementia is different because it gets worse over time and affects thinking, behavior, and emotions in a serious way.
+              
+                          </p>
+        </section>
+
+        <!-- Types of Dementia -->
+        <section class="mb-8 text-lg">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">Types of Dementia</h2>
+            <p class="text-gray-800 mb-3">There are several types of dementia, but the most common ones include:</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li class="text-gray-800"><strong>Alzheimer’s Disease:</strong> This is the most common type of dementia. It causes slow memory loss, confusion, and difficulty speaking or understanding things. Scientists believe that sticky clumps of protein build up in the brain and stop it from working properly.
+                </li>
+                <li class="text-gray-800"><strong>Vascular Dementia:</strong> This happens when blood flow to the brain is blocked or reduced, usually because of strokes or other blood vessel problems. People with vascular dementia may have trouble thinking quickly, making decisions, or remembering things.
+
+                </li>
+                <li class="text-gray-800"><strong>Lewy Body Dementia:</strong> This type of dementia happens when tiny clumps of protein called Lewy bodies build up in the brain. It can cause memory loss, confusion, and even hallucinations (seeing or hearing things that aren’t there).</li>
+                <li class="text-gray-800"><strong>Frontotemporal Dementia:</strong> This affects the front and side parts of the brain, which control behavior, personality, and speech. People with this type of dementia may act differently than they used to, have trouble speaking, or make poor decisions.</li>
+            </ul>
+            <p class="text-gray-700 mt-3">Each type of dementia affects people in different ways, but they all get worse over time.</p>
+        </section>
+
+        <!-- Early Signs -->
+        <section class="mb-8 text-lg">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">Early Signs of Dementia</h2>
+            <p class="text-gray-700 mb-3">Dementia starts slowly, and people may not notice the signs at first. Some early symptoms include:</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li class="text-gray-800">Memory Loss – Forgetting important dates, names, or recent events.
+                </li>
+                <li class="text-gray-800">Difficulty with Tasks – Struggling to follow steps for cooking, paying bills, or getting dressed.</li>
+                <li class="text-gray-800">Confusion – Not recognizing familiar places or getting lost easily.</li>
+                <li class="text-gray-800">Trouble Speaking – Forgetting words or repeating the same things.
+                </li>
+                <li class="text-gray-800">Changes in Mood – Feeling sad, anxious, or easily frustrated.</li>
+                <li class="text-gray-800">Poor Judgment – Making unusual decisions, like wearing the wrong clothes for the weather.</li>
+            </ul>
+            <p class="text-gray-700 mt-3">If someone is showing these signs, it’s important to see a doctor. Catching dementia early can help people get the care and support they need.</p>
+        </section>
+
+        <!-- Causes of Dementia -->
+        <section class="mb-8 text-lg">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">What Causes Dementia?</h2>
+            <p class="text-gray-700">
+                Dementia is caused by brain cell damage. Factors that increase the risk include aging, family history, health problems like high blood pressure, brain injuries, and an unhealthy lifestyle.
+            </p>
+        </section>
+
+        <!-- Diagnosis -->
+        <section class="mb-8 text-lg">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">How is Dementia Diagnosed?</h2>
+            <p class="text-gray-700">
+              There is no single test for dementia. Doctors check for it by asking questions about memory, problem-solving, and daily activities. They may also do brain scans or blood tests to rule out other health problems. If a person is diagnosed with dementia, doctors can help them and their family understand what to expect and how to manage symptoms.
+            </p>
+        </section>
+
+        <!-- Treatment and Cure -->
+        <section class="mb-8 text-lg">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">Is There a Cure for Dementia?</h2>
+            <p class="text-gray-700">
+              Right now, there is no cure for dementia, but doctors can give medicines and treatments to help with symptoms. These treatments may slow down memory loss and help people stay independent for as long as possible. Scientists are working hard to find better treatments and, one day, a cure.
+            </p>
+        </section>
+
+        <!-- Helping People with Dementia -->
+        <section class="mb-8 text-lg">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">How Can We Help People with Dementia?</h2>
+            <p class="text-gray-700 mb-3">Supporting someone with dementia can make a big difference. Here are some ways to help:</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li class="text-gray-800"><strong>Be Patient:</strong> People with dementia may forget things or repeat themselves. Stay calm and help them kindly.</li>
+                <li class="text-gray-800"><strong>Keep Things Simple:</strong> Give clear instructions and avoid too many choices at once.</li>
+                <li class="text-gray-800"><strong>Create a Safe Space:</strong> Remove trip hazards and help with organization.</li>
+                <li class="text-gray-800"><strong>Encourage Activities:</strong> Playing music, looking at old photos, or doing simple crafts can help keep their mind active.</li>
+                <li class="text-gray-800"><strong>Stay in Touch:</strong> Spend time with them and remind them they are loved and cared for.</li>
+            </ul>
+            <p class="text-gray-700 mt-3">Dementia can be challenging, but with support, people can still have a good quality of life. Families, friends, and caregivers all play an important role in making sure their loved ones feel safe and valued.</p>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="mb-8 text-lg">
+            <h2 class="text-2xl font-semibold text-purple-600 mb-3">In Summary</h2>
+            <p class="text-gray-700">
+              Dementia is a condition that affects memory, thinking, and daily life. It happens when brain cells are damaged, and it gets worse over time. While there is no cure, early diagnosis and good care can help people live as comfortably as possible. Learning about dementia is important so we can support those who have it and work toward a future where better treatments are available.
+            </p>
+        </section>
+
+    </div>
+  <LogoCloudRight data={landingData.partners} />
+  <BentoGrid data={landingData.services} />
+  <ContentBg data={landingData.howWeDoIt} />
+  <ContactForm />
+</BaseLayout>

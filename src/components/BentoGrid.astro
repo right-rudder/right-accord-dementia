@@ -1,0 +1,177 @@
+---
+import ImageComp from "./ImageComp.astro";
+import { FaTools } from "react-icons/fa";
+import { TbPropeller } from "react-icons/tb";
+import { GiPowerGenerator } from "react-icons/gi";
+import { PiEngineFill } from "react-icons/pi";
+
+const { data } = Astro.props;
+---
+
+<section class="bg-gradient-to-b from-gray-100 to-slate-100 py-32" id={data.id}>
+  <div class="mx-auto max-w-2xl lg:max-w-7xl lg:px-8">
+    <h2 class="text-base text-center font-semibold text-purple-700">
+      {data.upperheading}
+    </h2>
+    <p
+      class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl lg:text-6xl font-bold tracking-tight text-black"
+    >
+      {data.heading}
+    </p>
+    <p
+      class="mt-6 mx-4 lg:mx-auto max-w-5xl text-balance text-base/6 font-parag text-gray-600 text-center"
+      set:html={data.description}
+    />
+    <div class="lg:mt-10 grid gap-4 mt-16 lg:grid-cols-3 lg:grid-rows-2">
+      <div
+        class="relative lg:row-span-2 flex justify-center align-middle items-center"
+      >
+        <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]">
+        </div>
+        <div
+          class="relative h-full flex flex-col justify-between overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]"
+        >
+          <div
+            class="relative px-8 py-12 lg:py-8 flex flex-col justify-start h-full"
+          >
+            <div class="flex justify-center items-center p-6 absolute inset-0">
+              <img src="/src/assets/icons/icon-elder.svg" alt="" class="opacity-10">            
+            </div>
+            <p
+              class="mt-2 text-2xl font-medium tracking-tight text-purple-900 max-lg:text-center"
+            >
+              {data.cards[0].title}
+            </p>
+            {
+              data.cards[0].descriptions.map((desc) => (
+                <p class="mt-2 mx-auto max-w-lg text-base/6 font-parag text-gray-600 max-lg:text-center">
+                  {desc}
+                </p>
+              ))
+            }
+          </div>
+          <div class="relative min-h-[22rem] overflow-hidden">
+            <div class="absolute inset-0 aspect-square">
+              <ImageComp
+                imagePath={data.cards[0].imagePath}
+                imageAlt={data.cards[0].imageAlt}
+                styles="size-full object-cover object-center"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]"
+        >
+        </div>
+      </div>
+      <div
+        class="relative max-lg:row-start-1 flex justify-center align-middle items-center"
+      >
+        <div
+          class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"
+        >
+        </div>
+        <div
+          class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]"
+        >
+          <div class="flex justify-center items-center p-6 absolute inset-0">
+            <img src="/src/assets/icons/icon-facility.svg" alt="" class="opacity-10">            
+          </div>
+          <div class="px-8 py-12 lg:py-8 sm:px-10 sm:pt-10">
+            <p
+              class="mt-2 text-2xl font-medium tracking-tight text-purple-900 max-lg:text-center"
+            >
+              {data.cards[1].title}
+            </p>
+            {
+              data.cards[1].descriptions.map((desc) => (
+                <p class="mt-2 mx-auto max-w-lg font-parag text-sm/6 text-gray-600 max-lg:text-center">
+                  {desc}
+                </p>
+              ))
+            }
+          </div>
+        </div>
+        <div
+          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"
+        >
+        </div>
+      </div>
+      <div
+        class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2 flex justify-center align-middle items-center"
+      >
+        <div class="absolute inset-px rounded-lg bg-white"></div>
+        <div
+          class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]"
+        >
+          <div class="flex justify-center items-center p-6 absolute inset-0">
+            <img src="/src/assets/icons/icon-insurance.svg" alt="" class="opacity-10">            
+          </div>
+          <div class="px-8 py-12 lg:py-8 sm:px-10 sm:pb-12 sm:pt-10">
+            <p
+              class="mt-2 text-2xl font-medium tracking-tight text-purple-900 max-lg:text-center"
+            >
+              {data.cards[2].title}
+            </p>
+            {
+              data.cards[2].descriptions.map((desc) => (
+                <p class="mt-2 mx-auto font-parag max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                  {desc}
+                </p>
+              ))
+            }
+          </div>
+        </div>
+        <div
+          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"
+        >
+        </div>
+      </div>
+      <div
+        class="relative lg:row-span-2 flex justify-center align-middle items-center"
+      >
+        <div
+          class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"
+        >
+        </div>
+        <div
+          class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]"
+        >
+          <div class="relative min-h-[22rem] aspect-square">
+            <div class="absolute inset-x-0 bottom-0 top-0 overflow-hidden">
+              <ImageComp
+                imagePath={data.cards[3].imagePath}
+                imageAlt={data.cards[3].imageAlt}
+                styles="size-full object-cover object-top"
+              />
+            </div>
+          </div>
+          <div class="relative px-8 py-12 lg:py-8 sm:px-10 sm:pb-12 sm:pt-10">
+            <div
+              class="flex justify-center items-center p-6 absolute inset-0 top-20"
+            >
+              <img src="/src/assets/icons/icon-staff.svg" alt="" class="opacity-10">            
+            </div>
+            <p
+              class="mt-2 text-2xl font-medium tracking-tight text-purple-900 max-lg:text-center"
+            >
+              {data.cards[3].title}
+            </p>
+            {
+              data.cards[3].descriptions.map((desc) => (
+                <p class="mt-2 mx-auto max-w-lg text-base/6 font-parag text-gray-600 max-lg:text-center">
+                  {desc}
+                </p>
+              ))
+            }
+          </div>
+        </div>
+        <div
+          class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

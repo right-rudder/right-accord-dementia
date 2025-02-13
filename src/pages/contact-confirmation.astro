@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import { FaCheckDouble } from "react-icons/fa";
+import { PHONE_NUMBER, EMAIL_ADDRESS } from "../consts";
+const headerData = {
+  headerH1: `<span class="text-yellow-600">Thank You</br>for Contacting</span>`,
+  imagePath: "/src/assets/kai-oberhauser-ELCSOhGi73M-unsplash.jpg",
+  imageAlt: "Right Accord airport runway lights",
+};
+---
+
+<BaseLayout siteTitle="Contact Confirmation">
+  <Header data={headerData} />
+
+  <section class="py-16 px-5 bg-white -mt-12">
+    <div
+      class="flex flex-col items-center text-3xl mx-auto text-center gap-8 max-w-3xl bg-gray-200 rounded-xl p-8"
+    >
+      <FaCheckDouble className="size-52 text-yellow-600" />
+      <p class="text-gray-600 mt-12 leading-relaxed font-parag">
+        Thank you for contacting <strong
+          class="text-yellow-600 font-sans font-black">Right Accord</strong
+        >. We are looking forward to speaking with you soon. We will review your
+        message and get back with you within 1-5 business days.
+      </p>
+      <p class="text-gray-600 mt-6 leading-relaxed font-parag">
+        You can also give us a call at <a
+          class="text-yellow-600 hover:text-yellow-700 hover:underline duration-300"
+          href=`tel:${PHONE_NUMBER}`
+          >{PHONE_NUMBER}
+          <br />
+        </a> or send us an email at <a
+          class="text-yellow-600 hover:text-yellow-700 hover:underline duration-300"
+          href=`mailto:${EMAIL_ADDRESS}`>{EMAIL_ADDRESS}</a
+        >.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

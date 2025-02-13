@@ -1,0 +1,41 @@
+---
+import terms from "../data/terms-of-service";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const { data } = terms;
+---
+
+<BaseLayout
+  siteTitle="Terms of Service | Elite Flight Training & Aircraft Management"
+  siteDescription="Terms of Service of Elite Flight Training Academy"
+>
+  <div class="h-24 w-full bg-gray-100"></div>
+
+  <section class="mt-12 font-sans flex flex-col items-center">
+    <h1
+      class="mx-auto text-center px-6 lg:px-0 text-yellow-700 font-black max-w-4xl text-5xl lg:text-6xl"
+      set:html={data.heading}
+    />
+    <p
+      class="mx-auto mt-2 text-muted-400 text-center"
+      set:html={data.subheading}
+    />
+    <div class="w-full mt-12 lg:w-3/5 bg-gray-100 px-8 py-12 rounded-sm">
+      {
+        data.content.map((part) => (
+          <div class="mb-12">
+            <h2 class="font-bold text-primary-900 tracking-tight uppercase mb-3 text-3xl">
+              {part.heading}
+            </h2>
+            {part.paragraphs.map((paragraph) => (
+              <p
+                class="mb-3 leading-relaxed font-parag text-muted-700 text-justify"
+                set:html={paragraph}
+              />
+            ))}
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
