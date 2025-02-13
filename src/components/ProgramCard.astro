@@ -1,0 +1,65 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+const {
+  title,
+  imagePath,
+  imageAlt,
+  link,
+  linkText = "Explore",
+  description,
+} = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/**/*.{jpeg,jpg,png,gif,webp}"
+);
+if (!images[imagePath])
+  throw new Error(
+    `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`
+  );
+---
+
+<div class="flex flex-col bg-white group relative overflow-hidden rounded-lg border-2 border-transparent hover:border-purple-500 duration-300 ease-in-out"
+>
+  <div
+    class="w-full h-[27rem] overflow-hidden flex flex-col justify-center items-center align-middle"
+  >
+    <p
+      class="z-10 w-full px-6 text-4xl font-bebas lg:translate-y-12 drop-shadow-md text-center leading-7 text-purple-200 lg:text-white group-hover:text-purple-200 group-hover:-translate-y-3 duration-300 ease-in-out"
+      set:html={title}
+    />
+    {
+      description && (
+        <p
+          class="z-10 mt-3 lg:mt-0 px-8 w-full lg:leading-3 lg:translate-y-10 font-normal text-lg lg:opacity-0 text-center leading-tight text-gray-100 group-hover:opacity-95 group-hover:-translate-y-1 group-hover:leading-tight duration-500 ease-out"
+          set:html={description}
+        />
+      )
+    }
+    <Image
+      src={images[imagePath]()}
+      alt={imageAlt}
+      class="absolute -z-0 h-full w-full object-cover object-top group-hover:blur-sm group-hover:-translate-y-3 group-hover:scale-105 duration-300 ease-out"
+      quality={60}
+      widths={[240, 540, 720, 1080, 1440, 1980]}
+      sizes={`(max-width: 300px) 240px, (max-width: 660px) 540px, (max-width: 900px) 720px, (max-width: 1200px) 1080px, (max-width: 1800px) 1440px, 1920px`}
+    />
+    <div
+      class="absolute z-0 w-full h-full bg-black/50 group-hover:bg-black/70 duration-500"
+    >
+    </div>
+  </div>
+  <a
+    href={link}
+    target="_self"
+    class="absolute btn-animate bottom-0 w-full h-16 bg-purple-800 hover:bg-purple-900 lg:opacity-50 lg:translate-y-[101%] group-hover:brightness-125 group-hover:opacity-100 group-hover:translate-y-0 duration-300 text-purple-100"
+  >
+    <div class="flex h-full w-full justify-center align-middle items-center">
+      <p
+        class="relative block z-10 text-center text-lg tracking-wide font-bold leading-loose uppercase drop-shadow-sm"
+      >
+        {linkText}
+      </p>
+    </div>
+  </a>
+</div>
