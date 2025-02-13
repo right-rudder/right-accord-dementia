@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContentBg from "../../components/Content-bg.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import Header from "../../components/Header.astro";
+
+const landingData = {
+  howWeDoIt: {
+    id: "how-we-do-it",
+    imagePath: "/src/assets/images/how-we-do-it.jpg",
+    imageAlt: "Dementia care approach",
+    upperheading: "Approaches to Dementia Care",
+    heading: "Key Considerations for Care",
+    sections: [
+      {
+        description: `The Role of In-Home Care`,
+        paragraph:
+          "Individuals with vascular dementia benefit from a structured routine and assistance with daily activities. In-home care can provide cognitive stimulation and support to manage symptoms.",
+      },
+      {
+        description: `Developing a Personalized Care Plan`,
+        paragraph:
+          "Care plans should focus on controlling underlying vascular risk factors, such as hypertension and diabetes, while providing necessary cognitive and emotional support.",
+      },
+      {
+        description: `Long-Term Considerations`,
+        paragraph:
+          "Since vascular dementia progresses differently for each individual, ongoing assessments help determine the right level of care as symptoms evolve.",
+      },
+    ],
+  },
+  header: {
+    imagePath: "/src/assets/care-provider-measurin-blood-pressure-of-senior-patient.jpg",
+    imageAlt: "care provider measurin blood pressure of senior patient",
+    headerH1: "Vascular Dementia",
+    paragraph: "Vascular dementia results from reduced blood flow to the brain, often due to strokes or other vascular conditions. It affects memory, reasoning, and problem-solving abilities.",
+    buttons: [
+      {
+        name: "Contact",
+        link: "#contact-us"
+      }
+    ]
+  }
+};
+---
+
+<BaseLayout
+  siteTitle="Understanding Vascular Dementia | Causes, Symptoms & Care Options"
+  siteDescription="Learn about vascular dementia, how it develops, key symptoms, and care strategies. Understand risk factors, treatments, and the role of caregivers in managing this condition."
+  keywords="vascular dementia, stroke-related dementia, memory loss, cognitive decline, dementia symptoms, brain health, dementia treatment, senior care, caregiving for vascular dementia"
+>
+  <Header data={landingData.header} />
+  <div class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-purple-900 mb-6">Vascular Dementia: Causes, Symptoms, and Care Strategies</h1>
+
+    <section class="mb-8">
+        <p class="text-lg text-gray-700">
+            Vascular dementia is caused by reduced blood flow to the brain, often due to strokes or small vessel disease. It affects cognitive abilities, particularly problem-solving and decision-making skills.
+        </p>
+    </section>
+
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Common Symptoms</h2>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
+            <li><span class="font-semibold">Slowed Thinking:</span> Difficulty processing information and making decisions.</li>
+            <li><span class="font-semibold">Memory Issues:</span> Short-term memory loss and trouble recalling recent events.</li>
+            <li><span class="font-semibold">Mood Changes:</span> Increased anxiety, depression, or apathy.</li>
+            <li><span class="font-semibold">Trouble with Coordination:</span> Balance and mobility problems.</li>
+        </ul>
+    </section>
+
+  </div>
+  <ContentBg data={landingData.howWeDoIt} />
+  <ContactForm />
+</BaseLayout>

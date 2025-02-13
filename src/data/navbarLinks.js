@@ -17,7 +17,7 @@ export const navbarLinks = [
       },
       {
         name: "Lewy Body Dementia",
-        link: "/types/lewi",
+        link: "/types/lewy-body",
       },
       {
         name: "Frontotemporal Dementia",
@@ -27,7 +27,7 @@ export const navbarLinks = [
   },
   {
     name: "Blog",
-    link: "/blog#top",
+    link: "https://rightaccordhealth.com/blog",
   },
   {
     name: "Contact Us",
