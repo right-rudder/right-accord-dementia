@@ -1,0 +1,143 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContentBg from "../../components/Content-bg.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import Header from "../../components/Header.astro";
+
+const landingData = {
+  howWeDoIt: {
+    id: "how-we-do-it",
+    imagePath: "/src/assets/images/how-we-do-it.jpg",
+    imageAlt: "Dementia care approach",
+    upperheading: "Approaches to Dementia Care",
+    heading: "Key Considerations for Care",
+    sections: [
+      {
+        description: `The Role of In-Home Care`,
+        paragraph:
+          "Many families prefer in-home care to provide familiar surroundings and minimize stress for individuals with dementia. Caregivers assist with daily activities, safety monitoring, and emotional support.",
+      },
+      {
+        description: `Developing a Personalized Care Plan`,
+        paragraph:
+          "Assessing an individual's needs helps determine the right level of support. A structured care plan should balance independence with necessary assistance.",
+      },
+      {
+        description: `Long-Term Considerations`,
+        paragraph:
+          "Dementia is a progressive condition, and care needs will change over time. Families should explore long-term care options, including memory care facilities and advanced medical support when necessary.",
+      },
+    ],
+  },
+  header: {
+    imagePath: "/src/assets/care-provider-posing-for-picture-with-senior-patient.jpg",
+    imageAlt: "care provider posing for picture with senior patient",
+    headerH1: "Alzheimer's Disease",
+    paragraph: "Alzheimer’s disease is a progressive neurological disorder affecting memory, thinking, and behavior. It is the most common cause of dementia, leading to cognitive decline and an increasing need for care.",
+    buttons: [
+      {
+        name: "Contact",
+        link: "#contact-us"
+      }
+    ]
+  }
+};
+---
+
+<BaseLayout
+  siteTitle="Understanding Alzheimer's Disease | Causes, Symptoms & Care Options" 
+  siteDescription="Learn about Alzheimer's disease, its causes, early symptoms, and how it progresses over time. Discover treatment options, caregiving strategies, and resources for families navigating this condition." 
+  keywords="Alzheimer’s disease, memory loss, dementia symptoms, cognitive decline, brain health, early signs of Alzheimer’s, Alzheimer’s treatment, dementia care, senior care, neurological disorders, Alzheimer's stages, caregiving for Alzheimer's, memory care"
+>
+  <Header data={landingData.header} />
+  <div class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-purple-900 mb-6">Alzheimer’s Disease: Understanding the Condition, Symptoms, and Care</h1>
+
+    <!-- Introduction -->
+    <section class="mb-8">
+        <p class="text-lg text-gray-700">
+            Alzheimer’s disease is a progressive neurological disorder affecting memory, thinking, and behavior. It is the most common cause of dementia, leading to cognitive decline and an increasing need for care.
+        </p>
+    </section>
+
+    <!-- Symptoms -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Symptoms and Early Warning Signs</h2>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
+            <li><span class="font-semibold">Memory Loss:</span> Forgetting recent conversations, names, or events.</li>
+            <li><span class="font-semibold">Confusion with Time and Place:</span> Losing track of dates or locations.</li>
+            <li><span class="font-semibold">Difficulty with Problem-Solving:</span> Struggling with finances or following a recipe.</li>
+            <li><span class="font-semibold">Mood and Personality Changes:</span> Increased anxiety, depression, or social withdrawal.</li>
+            <li><span class="font-semibold">Trouble Finding Words:</span> Difficulty speaking or writing.</li>
+            <li><span class="font-semibold">Poor Judgment:</span> Making unusual decisions, such as mismanaging money.</li>
+        </ul>
+    </section>
+
+    <!-- Causes -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Causes and Risk Factors</h2>
+        <p class="text-lg text-gray-700">While the exact cause is unknown, several factors contribute to Alzheimer’s disease:</p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mt-2">
+            <li><span class="font-semibold">Age:</span> Risk increases significantly after age 65.</li>
+            <li><span class="font-semibold">Genetics:</span> Family history and genes like APOE-e4 raise the risk.</li>
+            <li><span class="font-semibold">Heart Health:</span> Conditions like diabetes, high blood pressure, and obesity may contribute.</li>
+            <li><span class="font-semibold">Brain Changes:</span> Protein deposits (amyloid plaques, tau tangles) disrupt brain function.</li>
+        </ul>
+    </section>
+
+    <!-- Stages -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Stages of Alzheimer’s Disease</h2>
+        <div class="space-y-4">
+            <div class="bg-white p-4 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800">Mild (Early Stage)</h3>
+                <p class="text-lg text-gray-700">Memory lapses, difficulty with tasks, and subtle personality changes.</p>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800">Moderate (Middle Stage)</h3>
+                <p class="text-lg text-gray-700">Increased confusion, difficulty recognizing loved ones, and behavioral changes.</p>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800">Severe (Late Stage)</h3>
+                <p class="text-lg text-gray-700">Significant memory loss, loss of mobility, and the need for full-time care.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Treatment and Management</h2>
+        <p class="text-lg text-gray-700">
+            While there is no cure, treatments help manage symptoms:
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mt-2">
+            <li><span class="font-semibold">Medications:</span> Cholinesterase inhibitors (donepezil, rivastigmine) may slow decline.</li>
+            <li><span class="font-semibold">Lifestyle Changes:</span> Exercise, brain-healthy diets, and mental stimulation help.</li>
+            <li><span class="font-semibold">Supportive Care:</span> Structured routines and caregiver assistance improve quality of life.</li>
+        </ul>
+    </section>
+
+    <!-- Caregiving -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Caring for a Loved One</h2>
+        <p class="text-lg text-gray-700">Caregivers play a crucial role. Some essential tips include:</p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mt-2">
+            <li><span class="font-semibold">Creating a Safe Environment:</span> Reduce fall risks and use reminders.</li>
+            <li><span class="font-semibold">Encouraging Independence:</span> Allow tasks they can still manage.</li>
+            <li><span class="font-semibold">Communication Strategies:</span> Use simple phrases and reassurance.</li>
+            <li><span class="font-semibold">Seeking Support:</span> Support groups and respite care can help caregivers.</li>
+        </ul>
+    </section>
+
+    <!-- Future Research -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Hope for the Future</h2>
+        <p class="text-lg text-gray-700">
+            Research is ongoing, with new treatments, early detection methods, and potential cures in development. Clinical trials offer hope for managing Alzheimer’s more effectively.
+        </p>
+    </section>
+  </div>
+
+  <ContentBg data={landingData.howWeDoIt} />
+  <ContactForm />
+</BaseLayout>
