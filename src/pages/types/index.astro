@@ -1,0 +1,83 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContentBg from "../../components/Content-bg.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import GridPrograms from "../../components/GridPrograms.astro";
+
+const landingData = {
+  howWeDoIt: {
+    id: "how-we-do-it",
+    imagePath: "/src/assets/images/how-we-do-it.jpg",
+    imageAlt: "Dementia care approach",
+    upperheading: "Approaches to Dementia Care",
+    heading: "Key Considerations for Care",
+    sections: [
+      {
+        description: `The Role of In-Home Care`,
+        paragraph:
+          "Many families prefer in-home care to provide familiar surroundings and minimize stress for individuals with dementia. Caregivers assist with daily activities, safety monitoring, and emotional support.",
+      },
+      {
+        description: `Developing a Personalized Care Plan`,
+        paragraph:
+          "Assessing an individual's needs helps determine the right level of support. A structured care plan should balance independence with necessary assistance.",
+      },
+      {
+        description: `Long-Term Considerations`,
+        paragraph:
+          "Dementia is a progressive condition, and care needs will change over time. Families should explore long-term care options, including memory care facilities and advanced medical support when necessary.",
+      },
+    ],
+  },
+  programs: {
+    upperHeading: "Understanding Dementia",
+    heading: "Most Common Types of Dementia",
+    description:
+      "Dementia is a general term for memory loss and cognitive decline that interferes with daily life. Various types of dementia affect different parts of the brain, leading to distinct symptoms and progression patterns. Below are some of the most common types.",
+    cards: [
+      {
+        title: "Alzheimer’s Disease",
+        imagePath: "/src/assets/care-provider-posing-for-picture-with-senior-patient.jpg",
+        imageAlt: "An elderly person with a caregiver offering support",
+        description:
+          "Alzheimer’s disease is the most common type of dementia, accounting for 60-80% of cases. It primarily affects memory, thinking, and behavior, gradually worsening over time.",
+        link: "/types/alzheimer",
+      },
+      {
+        title: "Vascular Dementia",
+        imagePath: "/src/assets/images/main-image_senior-care-advisor.jpg",
+        imageAlt: "A doctor reviewing brain scans with a senior patient",
+        description:
+          "Vascular dementia is caused by reduced blood flow to the brain, often due to strokes or other vascular conditions. It leads to difficulties with problem-solving, focus, and decision-making.",
+        link: "/types/vascular",
+      },
+      {
+        title: "Lewy Body Dementia",
+        imagePath: "/src/assets/images/main-image_senior-care-advisor.jpg",
+        imageAlt: "A senior receiving medical advice in a clinical setting",
+        description:
+          "Lewy body dementia is characterized by abnormal protein deposits in the brain, leading to symptoms like visual hallucinations, movement disorders, and fluctuating cognitive abilities.",
+        link: "/types/lewy",
+      },
+      {
+        title: "Frontotemporal Dementia",
+        imagePath: "/src/assets/images/main-image_senior-care-advisor.jpg",
+        imageAlt: "A concerned family discussing a diagnosis with a doctor",
+        description:
+          "Frontotemporal dementia affects the frontal and temporal lobes of the brain, causing personality changes, language difficulties, and impaired judgment.",
+        link: "/types/frontotemporal",
+      },
+    ],
+  },
+};
+---
+
+<BaseLayout
+  siteTitle="Most Common Types of Dementia | Causes, Symptoms & Differences" 
+  siteDescription="Learn about the most common types of dementia, including Alzheimer’s, vascular dementia, Lewy body dementia, and frontotemporal dementia. Understand their causes, symptoms, and key differences." 
+  keywords="dementia types, Alzheimer's disease, vascular dementia, Lewy body dementia, frontotemporal dementia, dementia symptoms, memory loss, cognitive decline, senior care, dementia causes, dementia treatment, brain health"
+>
+  <GridPrograms content={landingData.programs} />
+  <ContentBg data={landingData.howWeDoIt} />
+  <ContactForm />
+</BaseLayout>
