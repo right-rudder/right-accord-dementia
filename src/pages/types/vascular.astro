@@ -1,31 +1,19 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ContentBg from "../../components/Content-bg.astro";
+import LogoCloudRight from "../../components/LogoCloudRight.astro";
 import ContactForm from "../../components/ContactForm.astro";
 import Header from "../../components/Header.astro";
 
 const landingData = {
-  howWeDoIt: {
-    id: "how-we-do-it",
-    imagePath: "/src/assets/images/how-we-do-it.jpg",
-    imageAlt: "Dementia care approach",
-    upperheading: "Approaches to Dementia Care",
-    heading: "Key Considerations for Care",
-    sections: [
+  partners: {
+    id: "partners",
+    heading: "Need help?",
+    description:
+      "If you or a loved one in the Sarasota-Bradenton area is facing the challenges of dementia, help is available at Right Accord Home Health Care as well as Right Accord Placement Services. Our compassionate team provides personalized in-home care designed to support families and individuals struggling with dementia. Whether you need assistance with daily activities, memory care, or emotional support, we are here to help. Contact us today to learn how we can improve quality of life for you and your family.",
+    logos: [
       {
-        description: `The Role of In-Home Care`,
-        paragraph:
-          "Individuals with vascular dementia benefit from a structured routine and assistance with daily activities. In-home care can provide cognitive stimulation and support to manage symptoms.",
-      },
-      {
-        description: `Developing a Personalized Care Plan`,
-        paragraph:
-          "Care plans should focus on controlling underlying vascular risk factors, such as hypertension and diabetes, while providing necessary cognitive and emotional support.",
-      },
-      {
-        description: `Long-Term Considerations`,
-        paragraph:
-          "Since vascular dementia progresses differently for each individual, ongoing assessments help determine the right level of care as symptoms evolve.",
+        imagePath: "/src/assets/holding-hands-with-senior-patient.jpg",
+        imageAlt: "holding hands with senior patient",
       },
     ],
   },
@@ -51,25 +39,96 @@ const landingData = {
 >
   <Header data={landingData.header} />
   <div class="max-w-4xl mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold text-purple-900 mb-6">Vascular Dementia: Causes, Symptoms, and Care Strategies</h1>
+    <h1 class="text-4xl font-bold text-purple-900 mb-6">Vascular Dementia: Causes, Symptoms, and Care</h1>
 
+    <!-- Introduction -->
     <section class="mb-8">
         <p class="text-lg text-gray-700">
-            Vascular dementia is caused by reduced blood flow to the brain, often due to strokes or small vessel disease. It affects cognitive abilities, particularly problem-solving and decision-making skills.
+            Vascular dementia is a type of dementia caused by reduced blood flow to the brain, often due to strokes or other vascular conditions. It affects memory, thinking, and decision-making, with symptoms varying depending on the severity and location of brain damage.
         </p>
     </section>
 
+    <!-- Symptoms -->
     <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Common Symptoms</h2>
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Symptoms and Early Warning Signs</h2>
         <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
-            <li><span class="font-semibold">Slowed Thinking:</span> Difficulty processing information and making decisions.</li>
-            <li><span class="font-semibold">Memory Issues:</span> Short-term memory loss and trouble recalling recent events.</li>
-            <li><span class="font-semibold">Mood Changes:</span> Increased anxiety, depression, or apathy.</li>
-            <li><span class="font-semibold">Trouble with Coordination:</span> Balance and mobility problems.</li>
+            <li><span class="font-semibold">Confusion and Disorientation:</span> Difficulty understanding surroundings or processing information.</li>
+            <li><span class="font-semibold">Problems with Planning and Decision-Making:</span> Struggling to manage finances, follow instructions, or solve problems.</li>
+            <li><span class="font-semibold">Slowed Thinking:</span> Taking longer to process thoughts and respond in conversations.</li>
+            <li><span class="font-semibold">Mood and Personality Changes:</span> Increased anxiety, depression, or apathy.</li>
+            <li><span class="font-semibold">Difficulty Walking:</span> Unsteady gait, frequent falls, or movement difficulties.</li>
+            <li><span class="font-semibold">Memory Loss (Later Stages):</span> Unlike Alzheimer’s, memory problems may appear later in the disease.</li>
         </ul>
     </section>
 
+    <!-- Causes -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Causes and Risk Factors</h2>
+        <p class="text-lg text-gray-700">Vascular dementia is caused by conditions that block or reduce blood flow to the brain. Risk factors include:</p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mt-2">
+            <li><span class="font-semibold">Stroke:</span> Major strokes or multiple smaller strokes (multi-infarct dementia) can lead to cognitive decline.</li>
+            <li><span class="font-semibold">High Blood Pressure:</span> Increases the risk of vascular damage in the brain.</li>
+            <li><span class="font-semibold">Diabetes:</span> Uncontrolled blood sugar levels can contribute to blood vessel damage.</li>
+            <li><span class="font-semibold">High Cholesterol:</span> Can lead to blockages in arteries, restricting blood flow to the brain.</li>
+            <li><span class="font-semibold">Heart Disease:</span> Conditions affecting circulation may increase the likelihood of vascular dementia.</li>
+            <li><span class="font-semibold">Smoking:</span> Damages blood vessels, increasing stroke risk.</li>
+        </ul>
+    </section>
+
+    <!-- Stages -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Stages of Vascular Dementia</h2>
+        <div class="space-y-4">
+            <div class="bg-white p-4 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800">Mild Cognitive Impairment (Early Stage)</h3>
+                <p class="text-lg text-gray-700">Mild difficulties with planning, focus, and problem-solving.</p>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800">Moderate Stage</h3>
+                <p class="text-lg text-gray-700">Worsening cognitive decline, mood changes, and mobility issues.</p>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800">Severe Stage</h3>
+                <p class="text-lg text-gray-700">Significant cognitive impairment, difficulty speaking, and full-time care needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Treatment and Management</h2>
+        <p class="text-lg text-gray-700">
+            While there is no cure, treatments focus on managing underlying conditions and slowing progression:
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mt-2">
+            <li><span class="font-semibold">Managing Risk Factors:</span> Controlling blood pressure, cholesterol, and diabetes can slow cognitive decline.</li>
+            <li><span class="font-semibold">Medications:</span> Certain drugs, such as cholinesterase inhibitors, may improve symptoms.</li>
+            <li><span class="font-semibold">Physical Therapy:</span> Helps with movement and prevents falls.</li>
+            <li><span class="font-semibold">Cognitive Training:</span> Mental exercises can help maintain brain function.</li>
+        </ul>
+    </section>
+
+    <!-- Caregiving -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Caring for a Loved One</h2>
+        <p class="text-lg text-gray-700">Caregivers play a critical role in managing vascular dementia. Useful strategies include:</p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mt-2">
+            <li><span class="font-semibold">Encouraging a Healthy Lifestyle:</span> A balanced diet and regular exercise support brain health.</li>
+            <li><span class="font-semibold">Providing Structure:</span> A consistent routine can help reduce confusion.</li>
+            <li><span class="font-semibold">Assisting with Mobility:</span> Helping with movement and reducing fall risks.</li>
+            <li><span class="font-semibold">Seeking Support:</span> Caregiver support groups and professional help can make a difference.</li>
+        </ul>
+    </section>
+
+    <!-- Future Research -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Hope for the Future</h2>
+        <p class="text-lg text-gray-700">
+            Research continues to explore new treatments and prevention strategies. Ongoing clinical trials offer hope for better management of vascular dementia.
+        </p>
+    </section>
   </div>
-  <ContentBg data={landingData.howWeDoIt} />
+  
+  <LogoCloudRight data={landingData.partners} />
   <ContactForm />
 </BaseLayout>
