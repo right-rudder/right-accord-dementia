@@ -1,31 +1,19 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ContentBg from "../../components/Content-bg.astro";
+import LogoCloudRight from "../../components/LogoCloudRight.astro";
 import ContactForm from "../../components/ContactForm.astro";
 import Header from "../../components/Header.astro";
 
 const landingData = {
-  howWeDoIt: {
-    id: "how-we-do-it",
-    imagePath: "/src/assets/images/how-we-do-it.jpg",
-    imageAlt: "Dementia care approach",
-    upperheading: "Approaches to Dementia Care",
-    heading: "Key Considerations for Care",
-    sections: [
+  partners: {
+    id: "partners",
+    heading: "Need help?",
+    description:
+      "If you or a loved one in the Sarasota-Bradenton area is facing the challenges of dementia, help is available at Right Accord Home Health Care as well as Right Accord Placement Services. Our compassionate team provides personalized in-home care designed to support families and individuals struggling with dementia. Whether you need assistance with daily activities, memory care, or emotional support, we are here to help. Contact us today to learn how we can improve quality of life for you and your family.",
+    logos: [
       {
-        description: `The Role of In-Home Care`,
-        paragraph:
-          "Individuals with vascular dementia benefit from a structured routine and assistance with daily activities. In-home care can provide cognitive stimulation and support to manage symptoms.",
-      },
-      {
-        description: `Developing a Personalized Care Plan`,
-        paragraph:
-          "Care plans should focus on controlling underlying vascular risk factors, such as hypertension and diabetes, while providing necessary cognitive and emotional support.",
-      },
-      {
-        description: `Long-Term Considerations`,
-        paragraph:
-          "Since vascular dementia progresses differently for each individual, ongoing assessments help determine the right level of care as symptoms evolve.",
+        imagePath: "/src/assets/holding-hands-with-senior-patient.jpg",
+        imageAlt: "holding hands with senior patient",
       },
     ],
   },
@@ -46,24 +34,92 @@ const landingData = {
 >
   <Header data={landingData.header} />
   <div class="max-w-4xl mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold text-purple-900 mb-6">Lewy Body Dementia: Symptoms, Causes, and Care Approaches</h1>
+    <h1 class="text-4xl font-bold text-purple-900 mb-6">Lewy Body Dementia: Symptoms, Causes, and Care</h1>
 
+    <!-- Introduction -->
     <section class="mb-8">
         <p class="text-lg text-gray-700">
-            Lewy body dementia is caused by abnormal protein deposits (Lewy bodies) in the brain, affecting cognitive function, movement, and behavior. It shares characteristics with both Alzheimer’s and Parkinson’s disease.
+            Lewy body dementia (LBD) is a progressive neurological disorder caused by abnormal protein deposits in the brain. It affects thinking, movement, behavior, and mood, making it one of the most common types of dementia.
         </p>
     </section>
 
+    <!-- Symptoms -->
     <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Key Symptoms</h2>
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Symptoms and Early Warning Signs</h2>
         <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
-            <li><span class="font-semibold">Visual Hallucinations:</span> Seeing things that are not there.</li>
-            <li><span class="font-semibold">Fluctuating Cognition:</span> Periods of confusion followed by clarity.</li>
-            <li><span class="font-semibold">Motor Symptoms:</span> Parkinsonian movement issues like tremors.</li>
+            <li><span class="font-semibold">Visual Hallucinations:</span> Seeing things that are not there, often early in the disease.</li>
+            <li><span class="font-semibold">Fluctuating Cognitive Abilities:</span> Periods of confusion that vary day to day.</li>
+            <li><span class="font-semibold">Movement Issues:</span> Parkinson’s-like symptoms, including tremors and stiffness.</li>
+            <li><span class="font-semibold">Sleep Disturbances:</span> Acting out dreams, insomnia, or excessive daytime sleepiness.</li>
+            <li><span class="font-semibold">Autonomic Nervous System Dysfunction:</span> Blood pressure fluctuations, dizziness, and urinary problems.</li>
+            <li><span class="font-semibold">Memory and Attention Problems:</span> Difficulty focusing, processing information, or recalling details.</li>
         </ul>
     </section>
 
+    <!-- Causes -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Causes and Risk Factors</h2>
+        <p class="text-lg text-gray-700">The exact cause of Lewy body dementia is unknown, but several risk factors have been identified:</p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mt-2">
+            <li><span class="font-semibold">Abnormal Protein Deposits:</span> Clumps of alpha-synuclein (Lewy bodies) disrupt brain function.</li>
+            <li><span class="font-semibold">Age:</span> Most commonly diagnosed in people over 60.</li>
+            <li><span class="font-semibold">Genetics:</span> Family history may increase the risk.</li>
+            <li><span class="font-semibold">Parkinson’s Disease:</span> Some cases develop from Parkinson’s-related brain changes.</li>
+        </ul>
+    </section>
+
+    <!-- Stages -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Stages of Lewy Body Dementia</h2>
+        <div class="space-y-4">
+            <div class="bg-white p-4 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800">Early Stage</h3>
+                <p class="text-lg text-gray-700">Mild cognitive changes, occasional hallucinations, and slight movement difficulties.</p>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800">Middle Stage</h3>
+                <p class="text-lg text-gray-700">Increased memory issues, worsening movement problems, and significant sleep disturbances.</p>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800">Late Stage</h3>
+                <p class="text-lg text-gray-700">Severe cognitive decline, difficulty swallowing, and full-time care needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Treatment and Management</h2>
+        <p class="text-lg text-gray-700">
+            While there is no cure, treatments focus on managing symptoms:
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mt-2">
+            <li><span class="font-semibold">Medications:</span> Cholinesterase inhibitors may help cognitive symptoms, while Parkinson’s medications aid movement.</li>
+            <li><span class="font-semibold">Physical Therapy:</span> Helps improve mobility and reduce fall risks.</li>
+            <li><span class="font-semibold">Behavioral Strategies:</span> Structured routines and a calm environment help reduce confusion.</li>
+        </ul>
+    </section>
+
+    <!-- Caregiving -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Caring for a Loved One</h2>
+        <p class="text-lg text-gray-700">Caregivers play a vital role in managing LBD. Helpful strategies include:</p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mt-2">
+            <li><span class="font-semibold">Managing Hallucinations:</span> Reassure without arguing about what they see.</li>
+            <li><span class="font-semibold">Supporting Movement:</span> Assist with walking and prevent falls.</li>
+            <li><span class="font-semibold">Creating a Routine:</span> Consistent daily activities help reduce confusion.</li>
+            <li><span class="font-semibold">Seeking Support:</span> Support groups and professional guidance can help caregivers.</li>
+        </ul>
+    </section>
+
+    <!-- Future Research -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Hope for the Future</h2>
+        <p class="text-lg text-gray-700">
+            Ongoing research aims to improve diagnosis and treatment options. Clinical trials and emerging therapies offer hope for better management of Lewy body dementia.
+        </p>
+    </section>
   </div>
-  <ContentBg data={landingData.howWeDoIt} />
+  <LogoCloudRight data={landingData.partners} />
   <ContactForm />
 </BaseLayout>
