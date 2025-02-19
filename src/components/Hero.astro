@@ -24,7 +24,8 @@ const { data } = Astro.props;
         >
           {data.heading}
         </h1>
-        <h2 class="text-balance mt-4 text-4xl lg:text-5xl font-bold text-purple-950 lg:text-yellow-500 brightness-90"
+        <h2 class="text-balance mt-4 text-4xl lg:text-5xl font-bold text-yellow-500 brightness-90"
+        style="text-shadow: 2px 2px 4px black;"
         set:html={data.subHeading}
         >
         </h2>
