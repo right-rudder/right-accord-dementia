@@ -1,31 +1,19 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ContentBg from "../../components/Content-bg.astro";
+import LogoCloudRight from "../../components/LogoCloudRight.astro";
 import ContactForm from "../../components/ContactForm.astro";
 import Header from "../../components/Header.astro";
 
 const landingData = {
-  howWeDoIt: {
-    id: "how-we-do-it",
-    imagePath: "/src/assets/images/how-we-do-it.jpg",
-    imageAlt: "Dementia care approach",
-    upperheading: "Approaches to Dementia Care",
-    heading: "Key Considerations for Care",
-    sections: [
+  partners: {
+    id: "partners",
+    heading: "Need help?",
+    description:
+      "If you or a loved one in the Sarasota-Bradenton area is facing the challenges of dementia, help is available at Right Accord Home Health Care as well as Right Accord Placement Services. Our compassionate team provides personalized in-home care designed to support families and individuals struggling with dementia. Whether you need assistance with daily activities, memory care, or emotional support, we are here to help. Contact us today to learn how we can improve quality of life for you and your family.",
+    logos: [
       {
-        description: `The Role of In-Home Care`,
-        paragraph:
-          "Individuals with vascular dementia benefit from a structured routine and assistance with daily activities. In-home care can provide cognitive stimulation and support to manage symptoms.",
-      },
-      {
-        description: `Developing a Personalized Care Plan`,
-        paragraph:
-          "Care plans should focus on controlling underlying vascular risk factors, such as hypertension and diabetes, while providing necessary cognitive and emotional support.",
-      },
-      {
-        description: `Long-Term Considerations`,
-        paragraph:
-          "Since vascular dementia progresses differently for each individual, ongoing assessments help determine the right level of care as symptoms evolve.",
+        imagePath: "/src/assets/holding-hands-with-senior-patient.jpg",
+        imageAlt: "holding hands with senior patient",
       },
     ],
   },
@@ -46,24 +34,92 @@ const landingData = {
 >
   <Header data={landingData.header} />
   <div class="max-w-4xl mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold text-purple-900 mb-6">Frontotemporal Dementia: Recognizing and Managing Symptoms</h1>
+    <h1 class="text-4xl font-bold text-purple-900 mb-6">Frontotemporal Dementia: Symptoms, Causes, and Care</h1>
 
+    <!-- Introduction -->
     <section class="mb-8">
         <p class="text-lg text-gray-700">
-            Frontotemporal dementia (FTD) affects the frontal and temporal lobes of the brain, leading to significant changes in personality, behavior, and communication.
+            Frontotemporal dementia (FTD) is a group of brain disorders affecting personality, behavior, and language due to degeneration in the brain’s frontal and temporal lobes. Unlike Alzheimer’s, FTD typically affects younger individuals, often between ages 40 and 65.
         </p>
     </section>
 
+    <!-- Symptoms -->
     <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Common Symptoms</h2>
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Symptoms and Early Signs</h2>
         <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
-            <li><span class="font-semibold">Personality Changes:</span> Loss of social awareness, impulsivity, or inappropriate behavior.</li>
-            <li><span class="font-semibold">Speech and Language Issues:</span> Difficulty forming words or understanding language.</li>
-            <li><span class="font-semibold">Emotional Withdrawal:</span> Loss of empathy and emotional expression.</li>
+            <li><span class="font-semibold">Behavioral Changes:</span> Loss of inhibition, inappropriate social behavior, or impulsivity.</li>
+            <li><span class="font-semibold">Emotional Withdrawal:</span> Apathy, lack of empathy, and reduced social engagement.</li>
+            <li><span class="font-semibold">Language Difficulties:</span> Trouble speaking, understanding words, or forming coherent sentences.</li>
+            <li><span class="font-semibold">Poor Judgment and Decision-Making:</span> Engaging in risky or uncharacteristic actions.</li>
+            <li><span class="font-semibold">Repetitive Behaviors:</span> Compulsive actions like tapping, clapping, or repeating phrases.</li>
+            <li><span class="font-semibold">Loss of Muscle Coordination:</span> Difficulty walking, swallowing, or performing motor tasks.</li>
         </ul>
     </section>
 
+    <!-- Causes -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Causes and Risk Factors</h2>
+        <p class="text-lg text-gray-700">FTD is caused by the abnormal accumulation of proteins in the brain, leading to nerve cell damage. Some contributing factors include:</p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mt-2">
+            <li><span class="font-semibold">Genetics:</span> Around 30-40% of cases have a hereditary link.</li>
+            <li><span class="font-semibold">Protein Buildup:</span> Abnormal tau and TDP-43 proteins cause brain cell deterioration.</li>
+            <li><span class="font-semibold">Brain Changes:</span> Shrinking in the frontal and temporal lobes affects cognitive functions.</li>
+        </ul>
+    </section>
+
+    <!-- Types of FTD -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Types of Frontotemporal Dementia</h2>
+        <div class="space-y-4">
+            <div class="bg-white p-4 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800">Behavioral Variant FTD (bvFTD)</h3>
+                <p class="text-lg text-gray-700">Primarily affects personality and behavior, causing impulsivity and emotional detachment.</p>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800">Primary Progressive Aphasia (PPA)</h3>
+                <p class="text-lg text-gray-700">Affects language skills, making it difficult to speak, understand, or find words.</p>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800">Movement Disorders</h3>
+                <p class="text-lg text-gray-700">Leads to physical symptoms similar to Parkinson’s or ALS, affecting muscle control.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Treatment and Management</h2>
+        <p class="text-lg text-gray-700">
+            There is no cure for FTD, but symptoms can be managed with supportive care:
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mt-2">
+            <li><span class="font-semibold">Medications:</span> Antidepressants and antipsychotics may help control behavioral symptoms.</li>
+            <li><span class="font-semibold">Speech and Occupational Therapy:</span> Supports language skills and daily living activities.</li>
+            <li><span class="font-semibold">Structured Routines:</span> Establishing consistency helps reduce confusion and agitation.</li>
+        </ul>
+    </section>
+
+    <!-- Caregiving -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Caring for a Loved One</h2>
+        <p class="text-lg text-gray-700">FTD can be challenging for caregivers. Some essential strategies include:</p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mt-2">
+            <li><span class="font-semibold">Managing Behavioral Symptoms:</span> Redirect attention and use positive reinforcement.</li>
+            <li><span class="font-semibold">Providing a Safe Environment:</span> Reduce fall risks and remove hazardous objects.</li>
+            <li><span class="font-semibold">Encouraging Social Interaction:</span> Engage in simple activities to maintain connections.</li>
+            <li><span class="font-semibold">Seeking Support:</span> Join caregiver support groups for guidance and emotional relief.</li>
+        </ul>
+    </section>
+
+    <!-- Research and Future Outlook -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-purple-900 mb-4">Hope for the Future</h2>
+        <p class="text-lg text-gray-700">
+            Research on FTD is ongoing, with clinical trials exploring potential treatments and early detection methods. Scientists continue to study genetic and biological factors that may lead to future therapies.
+        </p>
+    </section>
   </div>
-  <ContentBg data={landingData.howWeDoIt} />
+
+  <LogoCloudRight data={landingData.partners} />
   <ContactForm />
 </BaseLayout>
