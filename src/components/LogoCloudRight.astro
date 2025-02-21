@@ -4,23 +4,32 @@ import ImageComp from "./ImageComp.astro";
 const { data } = Astro.props;
 ---
 
-<section class="bg-white py-32 lg:pt-24 lg:pb-32" id={data.id}>
+<section class="bg-gradient-to-br from-gray-200 via-gray-100 to-purple-400 py-32 lg:pt-24 lg:pb-32 m-2 lg:m-8 rounded-xl" id={data.id}>
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
       <div class="mx-auto w-full max-w-xl lg:mx-0">
         <h2
-          class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+          class="text-pretty text-5xl lg:text-6xl font-semibold text-yellow-500"
+          style="text-shadow: 2px 2px 4px black;"
+
         >
           {data.heading}
         </h2>
-        <p class="mt-6 text-lg/8 font-parag text-gray-600">
-          {data.description}
+        <p class="mt-6 text-xl/8 font-parag text-gray-800"
+          set:html={data.description}
+        >
         </p>
         <div class="mt-8 flex items-center gap-x-6">
           <a
-            href="#contact-us"
+            href="https://rightaccordhealth.com/specialty-care/alzheimers-dementia-care"
+            target="_blank"
             class="rounded-md bg-purple-800 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-purple-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
-            >Contact us <span aria-hidden="true">&rarr;</span></a
+            >Right Accord HHC <span aria-hidden="true">&rarr;</span></a>
+          <a
+            href="https://rightaccordseniorservices.com/"
+            target="_blank"
+            class="rounded-md bg-purple-800 px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-purple-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
+            >Right Accord PS <span aria-hidden="true">&rarr;</span></a
           >
         </div>
       </div>
@@ -32,7 +41,7 @@ const { data } = Astro.props;
             <ImageComp
               imagePath={logo.imagePath}
               imageAlt={logo.imageAlt}
-              styles="object-contain object-center"
+              styles="object-contain object-center rounded-xl"
             />
           ))
         }

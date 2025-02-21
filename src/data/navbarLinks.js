@@ -27,7 +27,7 @@ export const navbarLinks = [
   },
   {
     name: "Blog",
-    link: "https://rightaccordhealth.com/blog",
+    link: "/blog#top",
   },
   {
     name: "Contact Us",

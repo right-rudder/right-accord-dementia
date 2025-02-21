@@ -94,14 +94,14 @@ const Navbar = ({ pathname }) => {
             <div className="flex w-full items-center justify-between">
               <a
                 href="/#top"
-                title="RIGHT ACCORD"
+                title="Dementia Care"
                 className="hover:brightness-110 flex lg:h-24 justify-center align-middle items-center duration-200 ease-in-out w-full lg:w-1/5"
               >
                 <img
                   src={LOGO}
-                  alt="RIGHT ACCORD logo"
-                  aria-label="RIGHT ACCORD logo"
-                  title="RIGHT ACCORD"
+                  alt="Dementia Care logo"
+                  aria-label="Dementia Care logo"
+                  title="Dementia Care"
                   loading="eager"
                   className={`${navBar || openMobile ? "h-20 lg:h-20 mt-0" : "h-24 lg:h-24 mt-4"} object-contain duration-500`}
                 />
@@ -266,10 +266,10 @@ const Navbar = ({ pathname }) => {
           className="z-30 relative flex justify-center items-start align-top"
         >
           <img
-            src="/right-accord-logo-solo.svg"
-            alt="RIGHT ACCORD logo"
-            aria-label="RIGHT ACCORD logo"
-            title="RIGHT ACCORD"
+            src={LOGO}
+            alt="Dementia Care logo"
+            aria-label="Dementia Care logo"
+            title="Dementia Care"
             className="object-contain h-24 w-auto drop-shadow-lg"
           />
         </a>
