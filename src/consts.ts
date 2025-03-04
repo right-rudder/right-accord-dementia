@@ -4,7 +4,7 @@ export const SITE_TITLE =
 
 // Default meta description
 export const SITE_DESCRIPTION =
-  "Right Accord Private Duty Home Health Care offers compassionate, specialized in-home care services for seniors with dementia and Alzheimer's in Sarasota, Florida. Our trained caregivers provide personalized support to enhance the quality of life for your loved ones.";
+  "RIGHT ACCORD Private Duty Home Health Care offers compassionate, specialized in-home care services for seniors with dementia and Alzheimer's in Sarasota, Florida. Our trained caregivers provide personalized support to enhance the quality of life for your loved ones.";
 
 // Default keywords
 export const KEYWORDS =
@@ -19,7 +19,7 @@ export const BANNER = "Specialized Dementia and Alzheimer's Home Care in Sarasot
 
 export const LOCATIONS = [
   {
-    title: `Right Accord Private Duty-Home Health Care`,
+    title: `RIGHT ACCORD Private Duty-Home Health Care`,
     address: "3900 Clark Rd SUITE B5",
     city: "Sarasota",
     state: "FL",
@@ -30,7 +30,7 @@ export const LOCATIONS = [
 ];
 
 // CHANGE client business info
-export const TITLE = "Right Accord Private Duty-Home Health Care";
+export const TITLE = "RIGHT ACCORD Private Duty-Home Health Care";
 export const PHONE_NUMBER = "(941) 366-0801";
 export const ADDRESS_LINE_1 = "3900 Clark Rd SUITE B5";
 export const ADDRESS_LINE_2 = "Sarasota, Florida 34233";
@@ -39,4 +39,4 @@ export const INSTAGRAM_URL = null;
 export const LINKEDIN_URL = "https://www.linkedin.com/company/right-accord-home-care/";
 export const YOUTUBE_URL = "https://www.youtube.com/channel/UCL2zO8c8QN3fQBYsrTbNyuA";
 export const TWITTER_URL = null;
-export const EMAIL_ADDRESS = "info@rightaccordhealth.com";
+export const EMAIL_ADDRESS = "management@rightaccordhealth.com";
