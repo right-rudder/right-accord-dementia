@@ -1,12 +1,12 @@
 const privacyPolicies = {
   data: {
-    heading: `Privacy Policy of<br /> Right Accord`,
+    heading: `Privacy Policy of<br /> RIGHT ACCORD`,
     subheading: `Last updated: 01-29-2025`,
     content: [
       {
         heading: "Introduction",
         paragraphs: [
-          `Right Accord operates the <a href="/">https://rightaccordhealth.com/</a> website, which provides home care services for seniors and individuals in need of personal assistance.`,
+          `RIGHT ACCORD operates the <a href="/">https://rightaccordhealth.com/</a> website, which provides home care services for seniors and individuals in need of personal assistance.`,
           "This Privacy Policy outlines how we collect, use, and protect your personal information when you visit our website or use our services.",
           "By using our website, you consent to the collection and use of information as described in this policy. We use your personal data to provide and enhance our services. Your information will not be shared except as described in this Privacy Policy.",
           `The terms in this policy align with our <a href="/terms-of-service">Terms and Conditions</a>, unless otherwise specified.`,
