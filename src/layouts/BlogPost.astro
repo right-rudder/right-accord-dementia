@@ -3,13 +3,13 @@ import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import BaseLayout from "./BaseLayout.astro";
 import CTADementia from "../components/CTADementia.astro";
+import { LOGO } from "../consts"; // Import LOGO
 
 const content = {
   partners: {
     id: "partners",
     heading: "Need help?",
-    description:
-      `If you or a loved one in the Sarasota-Bradenton area is facing the challenges of dementia, help is available at <a href="https://rightaccordhealth.com/specialty-care/alzheimers-dementia-care" target="_blank" class="font-semibold text-purple-800 hover:underline">RIGHT ACCORD Home Health Care</a> as well as RIGHT ACCORD Placement Services. Our compassionate team provides personalized in-home care designed to support families and individuals struggling with dementia. Whether you need assistance with daily activities, memory care, or emotional support, we are here to help. Contact us today to learn how we can improve quality of life for you and your family.`,
+    description: `If you or a loved one in the Sarasota-Bradenton area is facing the challenges of dementia, help is available at <a href="https://rightaccordhealth.com/specialty-care/alzheimers-dementia-care" target="_blank" class="font-semibold text-purple-800 hover:underline">RIGHT ACCORD Home Health Care</a> as well as RIGHT ACCORD Placement Services. Our compassionate team provides personalized in-home care designed to support families and individuals struggling with dementia. Whether you need assistance with daily activities, memory care, or emotional support, we are here to help. Contact us today to learn how we can improve quality of life for you and your family.`,
     logos: [
       {
         imagePath: "/src/assets/holding-hands-with-senior-patient.jpg",
@@ -33,16 +33,44 @@ const {
   category,
   tags,
 } = Astro.props;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description: description,
+  image: heroImage ? new URL(heroImage, Astro.site).toString() : undefined,
+  author: {
+    "@type": "Person",
+    name: author,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "RIGHT ACCORD Private Duty Home Health Care",
+    logo: {
+      "@type": "ImageObject",
+      url: new URL(LOGO, Astro.site).toString(), // Use imported LOGO
+    },
+  },
+  datePublished: pubDate.toISOString(),
+  dateModified: updatedDate ? updatedDate.toISOString() : pubDate.toISOString(),
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": Astro.url.toString(),
+  },
+};
 ---
 
 <BaseLayout
-  pageTitle=`${title} | Blog | Summit Flight Academy`
+  pageTitle=`${title} | Blog | RIGHT ACCORD Private Duty Home Health Care`
   pageDescription={description}
-  pageKeywords={`blog, private pilot's license, written exam, pilot resources, flight training, kansas city flight school, exam preparation, pilot licensing, aviation blog, pilot tips and tricks` +
-    category +
-    tags?.join(", ")}
+  pageKeywords={`blog, dementia care, Alzheimer's care, senior care, ${category ? category + ", " : ""}${tags?.join(", ")}`}
 >
   <article class="flex flex-col mt-36 mb-24 max-w-4xl mx-auto p-5 gap-5">
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(articleSchema)}
+    />
     <h1 class="text-4xl lg:text-5xl font-bold">{title}</h1>
     <div class="flex items-center gap-3">
       <div>
@@ -61,19 +89,17 @@ const {
         )
       }
     </div>
-    <div class="w-full">
+    <div class="w-full prose prose-lg max-w-none">
       <slot />
     </div>
   </article>
-  <div
-    class="mt-10 flex items-center justify-center gap-x-6"
-  >
+  <div class="mt-10 flex items-center justify-center gap-x-6">
     <a
-      href="#help" id="help"
+      href="#help"
+      id="help"
       class="rounded-md bg-purple-800 duration-200 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-400"
-      >Need help? </a
-    >
-  </div>
+      >Need help?
+    </a>
   </div>
   <CTADementia data={content.partners} />
 </BaseLayout>
