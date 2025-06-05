@@ -6,6 +6,6 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://right-accord-dementia.netlify.app/',
+  site: "https://floridadementia.com/",
   integrations: [tailwind(), partytown(), sitemap(), react()],
 });
