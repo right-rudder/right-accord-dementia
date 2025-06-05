@@ -11,12 +11,7 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url, Astro.site).toString();
 
-const {
-  title,
-  description,
-  keywords,
-  image,
-} = Astro.props;
+const { title, description, keywords, image } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -70,15 +65,19 @@ const {
 <!-- UPDATE GTAG PLEASE -->
 
 <!-- Google tag (gtag.js) -->
-<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-N0P0G2LMD3"></script>
+<script
+  type="text/partytown"
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-N0P0G2LMD3"></script>
 <script type="text/partytown">
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-  gtag('config', 'G-N0P0G2LMD3');
+  gtag("config", "G-N0P0G2LMD3");
 </script>
-
 
 <!-- NEED TO UPDATE SCHEMA -->
 <script type="application/ld+json">
@@ -100,108 +99,19 @@ const {
       "addressCountry": "US",
       "postalCode": "34233"
     },
-    "currenciesAccepted": "USD",
-    "paymentAccepted": "Cash, Credit Card, Visa, Mastercard, American Express, Discover, Checks",
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 27.270084,
-        "longitude": -82.487290
-      },
-      "geoRadius": 50000
-    },
-    "url": "https://rightaccordhealth.com/",
-    "priceRange": "$$",
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 27.270084,
-      "longitude": -82.487290
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "00:00",
-        "closes": "23:45"
-      }
-    ],
-    "makesOffer": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "serviceType": "Hourly Care"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "serviceType": "24-Hour Care"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "serviceType": "Skilled Nursing"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "serviceType": "Staffing Services"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "serviceType": "Senior Care Advisors"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "serviceType": "Home Care Packages"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "serviceType": "Veteran Aid & Attendant Benefits"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "serviceType": "Long Term Care Insurance Assistance"
-        }
-      }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.7",
-      "reviewCount": "47"
-    },
+    "url": "https://floridadementia.com/",
     "sameAs": [
       "https://www.linkedin.com/company/right-accord-home-care/",
       "https://www.youtube.com/channel/UCL2zO8c8QN3fQBYsrTbNyuA",
       "https://www.facebook.com/RightAccord/"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
     ]
   }
-  </script>
-  
+</script>
