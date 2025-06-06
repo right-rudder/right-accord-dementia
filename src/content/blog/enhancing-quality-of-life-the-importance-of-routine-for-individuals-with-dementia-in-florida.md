@@ -12,7 +12,7 @@ tags:
     "dementia care",
     "structured routine",
     "Florida dementia support",
-    "Alzheimer’s disease",
+    "Alzheimer's disease",
     "cognitive health",
     "caregiver support",
     "daily routine",
